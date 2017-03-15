@@ -2,10 +2,8 @@
  * Created by David on 10/26/2016.
  */
 import React from "react";
+import {NavLink} from "react-router-dom";
 import {ListGroup, ListGroupItem, Col, Accordion, Panel} from "react-bootstrap";
-import NavLink from "../NavLink";
-// ...
-
 class Situational_Awareness extends React.Component {
   render() {
     return (

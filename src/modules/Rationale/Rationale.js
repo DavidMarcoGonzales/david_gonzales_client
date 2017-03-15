@@ -1,103 +1,111 @@
 /**
  * Created by David on 10/27/2016.
  */
+import { Route, NavLink } from "react-router-dom";
 import React from "react";
-import {ListGroup, ListGroupItem, Col, Accordion, Panel} from "react-bootstrap";
-import NavLink from "../NavLink";
+import { ListGroup, ListGroupItem, Accordion, Panel } from "react-bootstrap";
+
 
 class Rationale extends React.Component {
   render() {
     return (
       <div>
-        <Col xs={6} md={3}>
+        <section className="col-md-3" style={{
+            border: '1px solid red'
+          }} >
           <Accordion>
             <Panel header="Physical Restraint" eventKey="1">
               <ListGroup >
                 <ListGroupItem >
-                  <NavLink to="/repos/reactjs/react-router">Reducing Need</NavLink>
+                  <NavLink to="/Rationale/Need">Reducing Need</NavLink>
                 </ListGroupItem>
                 <ListGroupItem >
-                  <NavLink to="/repos/reactjs/react-router">Model</NavLink>
+                  <NavLink to="/Rationale/Model">Model</NavLink>
                 </ListGroupItem>
                 <ListGroupItem >
-                  <NavLink to="/repos/reactjs/react-router">Therapeutic Milieu</NavLink>
+                  <NavLink to="/Rationale/Milieu">Therapeutic Milieu</NavLink>
                 </ListGroupItem>
                 <ListGroupItem >
-                  <NavLink to="/repos/reactjs/react-router">Children</NavLink>
+                  <NavLink to="/Rationale/Children">Children</NavLink>
                 </ListGroupItem>
                 <ListGroupItem >
-                  <NavLink to="/repos/reactjs/react-router">Therapeutic Relationship</NavLink>
+                  <NavLink to="/Rationale/Relationship">Therapeutic Relationship</NavLink>
                 </ListGroupItem>
                 <ListGroupItem >
-                  <NavLink to="/repos/reactjs/react-router">Quiz</NavLink>
+                  <NavLink to="/Rationale/RestraintQuiz">Quiz</NavLink>
                 </ListGroupItem>
               </ListGroup>
             </Panel>
             <Panel header="TCI Domains" eventKey="2">
               <ListGroup >
                 <ListGroupItem >
-                  <NavLink to="/repos/reactjs/react-router">Stress Model</NavLink>
+                  <NavLink to="/Rationale/Model">Stress Model</NavLink>
                 </ListGroupItem>
                 <ListGroupItem >
-                  <NavLink to="/repos/reactjs/react-router">Self-Awareness</NavLink>
+                  <NavLink to="/Rationale/Awareness">Self-Awareness</NavLink>
                 </ListGroupItem>
                 <ListGroupItem >
-                  <NavLink to="/repos/reactjs/react-router">Importance of Knowing the Child</NavLink>
+                  <NavLink to="/Rationale/Child">Importance of Knowing the Child</NavLink>
                 </ListGroupItem>
                 <ListGroupItem >
-                  <NavLink to="/repos/reactjs/react-router">Importance of the Environment</NavLink>
+                  <NavLink to="/Rationale/Environment">Importance of the Environment</NavLink>
                 </ListGroupItem>
                 <ListGroupItem >
-                  <NavLink to="/repos/reactjs/react-router">Importance of Skill Development</NavLink>
+                  <NavLink to="/Rationale/Skills">Importance of Skill Development</NavLink>
                 </ListGroupItem>
                 <ListGroupItem >
-                  <NavLink to="/repos/reactjs/react-router">Quiz</NavLink>
+                  <NavLink to="/Rationale/DomainQuiz">Quiz</NavLink>
                 </ListGroupItem>
               </ListGroup>
             </Panel>
             <Panel header="Therapeutic Milieu" eventKey="3">
               <ListGroup >
                 <ListGroupItem >
-                  <NavLink to="/repos/reactjs/react-router">Active Listening</NavLink>
+                  <NavLink to="/Rationale/Listening">Active Listening</NavLink>
                 </ListGroupItem>
                 <ListGroupItem >
-                  <NavLink to="/repos/reactjs/react-router">Behavioral Support</NavLink>
+                  <NavLink to="/Rationale/BehavioralSupport">Behavioral Support</NavLink>
                 </ListGroupItem>
                 <ListGroupItem >
-                  <NavLink to="/repos/reactjs/react-router">Power Struggles</NavLink>
+                  <NavLink to="/Rationale/PowerStruggle">Power Struggles</NavLink>
                 </ListGroupItem>
                 <ListGroupItem >
-                  <NavLink to="/repos/reactjs/react-router">Quiz</NavLink>
+                  <NavLink to="/Rationale/MilieuQuiz">Quiz</NavLink>
                 </ListGroupItem>
               </ListGroup>
             </Panel>
             <Panel header="Children" eventKey="4">
               <ListGroup >
                 <ListGroupItem >
-                  <NavLink to="/repos/reactjs/react-router">Aggressive Behavior</NavLink>
+                  <NavLink to="/Rationale/Aggression">Aggressive Behavior</NavLink>
                 </ListGroupItem>
                 <ListGroupItem >
-                  <NavLink to="/repos/reactjs/react-router">Non Verbal Communication</NavLink>
+                  <NavLink to="/Rationale/NonVerbal">Non Verbal Communication</NavLink>
                 </ListGroupItem>
                 <ListGroupItem >
-                  <NavLink to="/repos/reactjs/react-router">Potential Violence</NavLink>
+                  <NavLink to="/Rationale/PotentialViolence">Potential Violence</NavLink>
                 </ListGroupItem>
                 <ListGroupItem >
-                  <NavLink to="/repos/reactjs/react-router">Crisis Co-regulation</NavLink>
+                  <NavLink to="/Rationale/CoRegulation">Crisis Co-regulation</NavLink>
                 </ListGroupItem>
                 <ListGroupItem >
-                  <NavLink to="/repos/reactjs/react-router">Life Space Interview</NavLink>
+                  <NavLink to="/Rationale/LSI">Life Space Interview</NavLink>
                 </ListGroupItem>
                 <ListGroupItem >
-                  <NavLink to="/repos/reactjs/react-router">Quiz</NavLink>
+                  <NavLink to="/Rationale/ChildrenQuiz">Quiz</NavLink>
                 </ListGroupItem>
               </ListGroup>
             </Panel>
             <Panel header="Therapeutic Relationship" eventKey="5">
             </Panel>
           </Accordion>
-        </Col>
-        {this.props.children}
+        </section>
+        <Route
+          path="/Rationale/:section"
+          render={({ match }) => <section className="col-md-9" style={{
+            border: '1px solid red'
+          }} ><h2>{match.params.section}</h2></section>}
+        />
       </div>
     )
   }
