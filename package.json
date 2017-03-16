@@ -14,6 +14,7 @@
     "react-router-bootstrap": "^0.23.1",
     "react-router-dom": "^4.0.0",
     "redux": "^3.6.0",
+    "redux-devtools-extension": "^2.13.0",
     "redux-immutable-state-invariant": "^1.2.4",
     "redux-thunk": "^2.1.0"
   },
@@ -24,7 +25,7 @@
     "eject": "react-scripts eject"
   },
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).",
-  "main": "index.js",
+  "main": "index.jsx",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/DavidMarcoGonzales/React-Redux-Node-Mongo.git"

@@ -2,17 +2,21 @@
  * Created by David on 10/27/2016.
  */
 import { Route, NavLink } from "react-router-dom";
+import { connect } from "react-redux";
 import React from "react";
 import { ListGroup, ListGroupItem, Accordion, Panel } from "react-bootstrap";
+// import { setCard } from "../../Redux/actions/cardActionsCreator";
+import  Card  from "../Card/Card";
 
 
 class Rationale extends React.Component {
   render() {
     return (
       <div>
-        <section className="col-md-3" style={{
+        <section className="col-md-3" >
+          {/*style={{
             border: '1px solid red'
-          }} >
+          }} >*/}
           <Accordion>
             <Panel header="Physical Restraint" eventKey="1">
               <ListGroup >
@@ -100,14 +104,23 @@ class Rationale extends React.Component {
             </Panel>
           </Accordion>
         </section>
+
         <Route
-          path="/Rationale/:section"
-          render={({ match }) => <section className="col-md-9" style={{
-            border: '1px solid red'
-          }} ><h2>{match.params.section}</h2></section>}
+          path="/:section/:subsection"
+          component={Card}
         />
+
       </div>
     )
   }
 }
-export default Rationale;
+Rationale.propTypes = {
+  card: React.PropTypes.object.isRequired,
+  cardAction: React.PropTypes.func
+}
+function mapStateToProps(state) {
+  return ({
+    card: state.card
+  })
+}
+export default connect(mapStateToProps)(Rationale);
