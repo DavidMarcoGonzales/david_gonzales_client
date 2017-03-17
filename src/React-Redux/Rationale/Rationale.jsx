@@ -6,96 +6,91 @@ import React from "react";
 import { ListGroup, ListGroupItem, Accordion, Panel } from "react-bootstrap";
 import  Card  from "../Card/Card";
 
-
 class Rationale extends React.Component {
-
   render() {
     return (
       <div>
         <section className="col-md-3" >
-          {/*style={{
-            border: '1px solid red'
-          }} >*/}
           <Accordion>
             <Panel header="Physical Restraint" eventKey="1">
               <ListGroup >
                 <ListGroupItem >
-                  <NavLink to="/Rationale/Need">Reducing Need</NavLink>
+                  <NavLink to="/Rationale/Rationale/Need">Reducing Need</NavLink>
                 </ListGroupItem>
                 <ListGroupItem >
-                  <NavLink to="/Rationale/Model">Model</NavLink>
+                  <NavLink to="/Rationale/Rationale/Model">Model</NavLink>
                 </ListGroupItem>
                 <ListGroupItem >
-                  <NavLink to="/Rationale/Milieu">Therapeutic Milieu</NavLink>
+                  <NavLink to="/Rationale/Rationale/Milieu">Therapeutic Milieu</NavLink>
                 </ListGroupItem>
                 <ListGroupItem >
-                  <NavLink to="/Rationale/Children">Children</NavLink>
+                  <NavLink to="/Rationale/Rationale/Children">Children</NavLink>
                 </ListGroupItem>
                 <ListGroupItem >
-                  <NavLink to="/Rationale/Relationship">Therapeutic Relationship</NavLink>
+                  <NavLink to="/Rationale/Rationale/Relationship">Therapeutic Relationship</NavLink>
                 </ListGroupItem>
                 <ListGroupItem >
-                  <NavLink to="/Rationale/RestraintQuiz">Quiz</NavLink>
+                  <NavLink to="/Rationale/Rationale/Quiz">Quiz</NavLink>
                 </ListGroupItem>
               </ListGroup>
             </Panel>
             <Panel header="TCI Domains" eventKey="2">
               <ListGroup >
                 <ListGroupItem >
-                  <NavLink to="/Rationale/Model">Stress Model</NavLink>
+                  <NavLink to="/Rationale/TCI/Model">Stress Model</NavLink>
                 </ListGroupItem>
                 <ListGroupItem >
-                  <NavLink to="/Rationale/Awareness">Self-Awareness</NavLink>
+                  <NavLink to="/Rationale/TCI/Awareness">Self-Awareness</NavLink>
                 </ListGroupItem>
                 <ListGroupItem >
-                  <NavLink to="/Rationale/Child">Importance of Knowing the Child</NavLink>
+                  <NavLink to="/Rationale/TCI/Child">Importance of Knowing the Child</NavLink>
                 </ListGroupItem>
                 <ListGroupItem >
-                  <NavLink to="/Rationale/Environment">Importance of the Environment</NavLink>
+                  <NavLink to="/Rationale/TCI/Environment">Importance of the Environment</NavLink>
                 </ListGroupItem>
                 <ListGroupItem >
-                  <NavLink to="/Rationale/Skills">Importance of Skill Development</NavLink>
+                  <NavLink to="/Rationale/TCI/Skills">Importance of Skill Development</NavLink>
                 </ListGroupItem>
                 <ListGroupItem >
-                  <NavLink to="/Rationale/DomainQuiz">Quiz</NavLink>
+                  <NavLink to="/Rationale/TCI/Quiz">Quiz</NavLink>
                 </ListGroupItem>
               </ListGroup>
             </Panel>
             <Panel header="Therapeutic Milieu" eventKey="3">
               <ListGroup >
                 <ListGroupItem >
-                  <NavLink to="/Rationale/Listening">Active Listening</NavLink>
+                  <NavLink to="/Rationale/Milieu/Listening">Active Listening</NavLink>
                 </ListGroupItem>
                 <ListGroupItem >
-                  <NavLink to="/Rationale/BehavioralSupport">Behavioral Support</NavLink>
+                  <NavLink to="/Rationale/Milieu/BehavioralSupport">Behavioral Support</NavLink>
                 </ListGroupItem>
                 <ListGroupItem >
-                  <NavLink to="/Rationale/PowerStruggle">Power Struggles</NavLink>
+                  <NavLink to="/Rationale/Milieu/PowerStruggle">Power Struggles</NavLink>
                 </ListGroupItem>
                 <ListGroupItem >
-                  <NavLink to="/Rationale/MilieuQuiz">Quiz</NavLink>
+                  <NavLink to="/Rationale/Milieu/Quiz">Quiz</NavLink>
                 </ListGroupItem>
               </ListGroup>
             </Panel>
             <Panel header="Children" eventKey="4">
               <ListGroup >
                 <ListGroupItem >
-                  <NavLink to="/Rationale/Aggression">Aggressive Behavior</NavLink>
+                  <NavLink to="/Rationale/Children/Aggression">Aggressive Behavior</NavLink>
                 </ListGroupItem>
                 <ListGroupItem >
-                  <NavLink to="/Rationale/NonVerbal">Non Verbal Communication</NavLink>
+                  <NavLink to="/Rationale/Children/NonVerbal">Non Verbal Communication</NavLink>
                 </ListGroupItem>
                 <ListGroupItem >
-                  <NavLink to="/Rationale/PotentialViolence">Potential Violence</NavLink>
+                  <NavLink to="/Rationale/Children/PotentialViolence">Potential Violence</NavLink>
                 </ListGroupItem>
                 <ListGroupItem >
-                  <NavLink to="/Rationale/CoRegulation">Crisis Co-regulation</NavLink>
+                  <NavLink to="/Rationale/Children/CoRegulation">Crisis Co-regulation</NavLink>
                 </ListGroupItem>
                 <ListGroupItem >
-                  <NavLink to="/Rationale/LSI">Life Space Interview</NavLink>
+                  <NavLink to="/Rationale/Children/LSI">Life Space Interview</NavLink>
                 </ListGroupItem>
                 <ListGroupItem >
-                  <NavLink to="/Rationale/ChildrenQuiz">Quiz</NavLink>
+                  <NavLink to="/Rationale/Children/Quiz">Quiz</NavLink>
                 </ListGroupItem>
               </ListGroup>
             </Panel>
@@ -105,7 +100,7 @@ class Rationale extends React.Component {
         </section>
 
         <Route
-          path="/:section/:subsection"
+          path="/:page/:section/:subsection"
           component={Card}
         />
 
