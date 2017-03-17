@@ -2,14 +2,13 @@
  * Created by David on 10/27/2016.
  */
 import { Route, NavLink } from "react-router-dom";
-import { connect } from "react-redux";
 import React from "react";
 import { ListGroup, ListGroupItem, Accordion, Panel } from "react-bootstrap";
-// import { setCard } from "../../Redux/actions/cardActionsCreator";
 import  Card  from "../Card/Card";
 
 
 class Rationale extends React.Component {
+
   render() {
     return (
       <div>
@@ -114,13 +113,5 @@ class Rationale extends React.Component {
     )
   }
 }
-Rationale.propTypes = {
-  card: React.PropTypes.object.isRequired,
-  cardAction: React.PropTypes.func
-}
-function mapStateToProps(state) {
-  return ({
-    card: state.card
-  })
-}
-export default connect(mapStateToProps)(Rationale);
+
+export default Rationale;
