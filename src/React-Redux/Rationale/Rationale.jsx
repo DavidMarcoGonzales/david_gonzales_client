@@ -15,22 +15,22 @@ class Rationale extends React.Component {
             <Panel header="Physical Restraint" eventKey="1">
               <ListGroup >
                 <ListGroupItem >
-                  <NavLink to="/Rationale/Rationale/Need">Reducing Need</NavLink>
+                  <NavLink to="/Rationale/Restraint/Need">Reducing Need</NavLink>
                 </ListGroupItem>
                 <ListGroupItem >
-                  <NavLink to="/Rationale/Rationale/Model">Model</NavLink>
+                  <NavLink to="/Rationale/Restraint/Model">Model</NavLink>
                 </ListGroupItem>
                 <ListGroupItem >
-                  <NavLink to="/Rationale/Rationale/Milieu">Therapeutic Milieu</NavLink>
+                  <NavLink to="/Rationale/Restraint/Milieu">Therapeutic Milieu</NavLink>
                 </ListGroupItem>
                 <ListGroupItem >
-                  <NavLink to="/Rationale/Rationale/Children">Children</NavLink>
+                  <NavLink to="/Rationale/Restraint/Children">Children</NavLink>
                 </ListGroupItem>
                 <ListGroupItem >
-                  <NavLink to="/Rationale/Rationale/Relationship">Therapeutic Relationship</NavLink>
+                  <NavLink to="/Rationale/Restraint/Relationship">Therapeutic Relationship</NavLink>
                 </ListGroupItem>
                 <ListGroupItem >
-                  <NavLink to="/Rationale/Rationale/Quiz">Quiz</NavLink>
+                  <NavLink to="/Rationale/Restraint/Quiz">Quiz</NavLink>
                 </ListGroupItem>
               </ListGroup>
             </Panel>
