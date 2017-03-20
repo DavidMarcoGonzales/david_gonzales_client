@@ -12,7 +12,8 @@ export function setCardSuccess(uri){
 
 export function asyncSetCard(uri) {
   return function (dispatch) {
-    return axios.get('https://david-gonzales-1.herokuapp.com/api/books')
+    
+    return axios.get(`https://david-gonzales-1.herokuapp.com/api${uri}`)
       .then(function (response) {
         dispatch(setCardSuccess(uri));
       })

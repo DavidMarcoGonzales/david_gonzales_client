@@ -2,30 +2,42 @@ import React, { Component } from 'react';
 import { asyncSetCard } from '../../Redux/actions/cardActionsCreator';
 import { connect } from "react-redux";
 
+
+
 class Card extends Component {
 
     componentWillMount() {
-        this.props.dispatch (asyncSetCard(`http://david-gonzales-1.herokuapp.com/${this.props.match.params.page}/${this.props.match.params.section}/${this.props.match.params.subsection}`));
+        let myURI = ''; {
+            let { page, section, subsection } = this.props.match.params;
+            myURI = `/${page}/${section}/${subsection}`;
+        }
+        console.log(myURI);
+        this.props.dispatch(asyncSetCard(myURI));
 
     }
 
     componentWillReceiveProps(nextProps) {
-        if (this.props.match.params.subsection === nextProps.match.params.subsection) {
-            console.log("equals")
-        } else {
-            console.log("not equal")
-            this.props.dispatch (asyncSetCard(`http://david-gonzales-1.herokuapp.com/${nextProps.match.params.page}/${nextProps.match.params.section}/${nextProps.match.params.subsection}`));
+        let myURI = ''; {
+            let { page, section, subsection } = this.props.match.params;
+            myURI = `/${page}/${section}/${subsection}`;
         }
+        let myNewURI = ''; {
+            let { page, section, subsection } = nextProps.match.params;
+            myNewURI = `/${page}/${section}/${subsection}`
+        }
+
+        console.log(myURI);
+        console.log(myNewURI);
+
+        if (myURI !== myNewURI) {
+            this.props.dispatch(asyncSetCard(myNewURI));
+        } else {console.log("not equal")}
     }
 
-
-
     render() {
-
         return (
             <div className='col-md-9' style={{ border: '1px solid black' }}>
 
-                `http://david-gonzales-1.herokuapp.com/{this.props.match.params.page}/{this.props.match.params.section}/{this.props.match.params.subsection}`
             </div>
         );
     }
