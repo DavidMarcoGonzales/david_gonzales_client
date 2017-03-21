@@ -15,22 +15,22 @@ class Rationale extends React.Component {
             <Panel header="Physical Restraint" eventKey="1">
               <ListGroup >
                 <ListGroupItem >
-                  <NavLink to="/api/Rationale/Restraint/Need">Reducing Need</NavLink>
+                  <NavLink to="/api/Rationale/Restraint/Need/page1">Reducing Need</NavLink>
                 </ListGroupItem>
                 <ListGroupItem >
-                  <NavLink to="/api/Rationale/Restraint/Model">Model</NavLink>
+                  <NavLink to="/api/Rationale/Restraint/Model/page1">Model</NavLink>
                 </ListGroupItem>
                 <ListGroupItem >
-                  <NavLink to="/api/Rationale/Restraint/Milieu">Therapeutic Milieu</NavLink>
+                  <NavLink to="/api/Rationale/Restraint/Milieu/page1">Therapeutic Milieu</NavLink>
                 </ListGroupItem>
                 <ListGroupItem >
-                  <NavLink to="/api/Rationale/Restraint/Children">Children</NavLink>
+                  <NavLink to="/api/Rationale/Restraint/Children/page1">Children</NavLink>
                 </ListGroupItem>
                 <ListGroupItem >
-                  <NavLink to="/api/Rationale/Restraint/Relationship">Therapeutic Relationship</NavLink>
+                  <NavLink to="/api/Rationale/Restraint/Relationship/page1">Therapeutic Relationship</NavLink>
                 </ListGroupItem>
                 <ListGroupItem >
-                  <NavLink to="/api/Rationale/Restraint/Quiz">Quiz</NavLink>
+                  <NavLink to="/api/Rationale/Restraint/Quiz/page1">Quiz</NavLink>
                 </ListGroupItem>
               </ListGroup>
             </Panel>
@@ -100,7 +100,7 @@ class Rationale extends React.Component {
         </section>
 
         <Route
-          path="/api/:page/:section/:subsection"
+          path="/:api/:page/:section/:subsection/:card"
           component={Card}
         />
 

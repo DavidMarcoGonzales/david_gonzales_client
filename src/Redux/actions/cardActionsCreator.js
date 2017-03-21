@@ -14,9 +14,9 @@ export function asyncSetCard(uri) {
   return function (dispatch) {
 
     //Dev   
-    return axios.get(uri)
+    // return axios.get(uri)
       //Prod
-      // return axios.get(`https://david-gonzales-1.herokuapp.com/api${uri}`)
+      return axios.get(`https://david-gonzales-1.herokuapp.com/api${uri}`)
       .then(function (response) {
         dispatch(setCardSuccess(uri));
       })

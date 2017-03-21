@@ -8,22 +8,25 @@ class Card extends Component {
 
     componentWillMount() {
         let myURI = ''; {
-            let { page, section, subsection } = this.props.match.params;
-            myURI = `/${page}/${section}/${subsection}`;
+            let { api, page, section, subsection, card } = this.props.match.params;
+            myURI = `/${api}/${page}/${section}/${subsection}/${card}`;
         }
+        
         console.log(myURI);
+
         this.props.dispatch(asyncSetCard(myURI));
 
     }
 
     componentWillReceiveProps(nextProps) {
+
         let myURI = ''; {
-            let { page, section, subsection } = this.props.match.params;
-            myURI = `/${page}/${section}/${subsection}`;
+            let { api, page, section, subsection, card } = this.props.match.params;
+            myURI = `/${api}/${page}/${section}/${subsection}/${card}`;
         }
         let myNewURI = ''; {
-            let { page, section, subsection } = nextProps.match.params;
-            myNewURI = `/${page}/${section}/${subsection}`
+            let { api, page, section, subsection, card } = nextProps.match.params;
+            myNewURI = `/${api}/${page}/${section}/${subsection}/${card}`
         }
 
         console.log(myURI);
