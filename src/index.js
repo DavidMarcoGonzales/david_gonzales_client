@@ -32,18 +32,18 @@ ReactDOM.render(
           <div className="navbar navbar-default" style={{ border: '1px solid red' }} >
             <ul className="nav navbar-nav">
               <li className="nav"><NavLink to="/">Dashboard</NavLink></li>
-              <li className="nav"><NavLink to="/Rationale">Rationale</NavLink></li>
-              <li className="nav"><NavLink to="/Situational_Awareness">Situational Awareness</NavLink></li>
-              <li className="nav"><NavLink to="/TCI">TCI</NavLink></li>
-              <li className="nav"><NavLink to="/Assessment">Assessment</NavLink></li>
+              <li className="nav"><NavLink to="/api/Rationale">Rationale</NavLink></li>
+              <li className="nav"><NavLink to="/api/Situational_Awareness">Situational Awareness</NavLink></li>
+              <li className="nav"><NavLink to="/api/TCI">TCI</NavLink></li>
+              <li className="nav"><NavLink to="/api/Assessment">Assessment</NavLink></li>
               <li className="nav"><NavLink to="/about">About</NavLink></li>
             </ul>
           </div>
           <Route exact path="/" component={Dashboard} />
-          <Route path="/Rationale" component={Rationale} />
-          <Route path="/Situational_Awareness" component={Situational_Awareness} />
-          <Route path="/TCI" component={TCI} />
-          <Route path="/Assessment" component={Assessment} />
+          <Route path="/api/Rationale" component={Rationale} />
+          <Route path="/api/Situational_Awareness" component={Situational_Awareness} />
+          <Route path="/api/TCI" component={TCI} />
+          <Route path="/api/Assessment" component={Assessment} />
           <Route path="/about" component={About} />
         </div>
       </Provider>
