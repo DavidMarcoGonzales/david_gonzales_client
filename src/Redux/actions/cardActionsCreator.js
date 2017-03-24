@@ -4,21 +4,21 @@ import axios from 'axios';
 
 
 export function setCard(uri) {
-  return ({ type: SET_CURRENT_CARD, card: { uri } });
+  return ({ type: SET_CURRENT_CARD, card: uri });
 }
 export function setCardSuccess(uri) {
-  return ({ type: SET_CARD_SUCCESS, card: { uri } });
+  return ({ type: SET_CARD_SUCCESS, card: uri });
 }
 
 export function asyncSetCard(uri) {
+  console.log('cardActionCreator line 14')
   return function (dispatch) {
 
-    //Dev   
-    // return axios.get(uri)
-      //Prod
-      return axios.get(`https://david-gonzales-1.herokuapp.com/api${uri}`)
+
+      // return axios.get(uri)
+      return axios.get(`https://david-gonzales-1.herokuapp.com${uri}`)
       .then(function (response) {
-        dispatch(setCardSuccess(uri));
+        dispatch(setCardSuccess(response.data[0]));
       })
       .catch(error => {
         throw (error);

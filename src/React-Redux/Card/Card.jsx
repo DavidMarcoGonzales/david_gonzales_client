@@ -33,6 +33,7 @@ class Card extends Component {
         console.log(myNewURI);
 
         if (myURI !== myNewURI) {
+            console.log('Card line 36')
             this.props.dispatch(asyncSetCard(myNewURI));
         } else {console.log("not equal")}
     }
