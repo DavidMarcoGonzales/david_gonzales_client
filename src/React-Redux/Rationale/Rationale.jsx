@@ -4,7 +4,7 @@
 import { Route, NavLink } from "react-router-dom";
 import React from "react";
 import { ListGroup, ListGroupItem, Accordion, Panel } from "react-bootstrap";
-import  Card  from "../Card/Card";
+import  CardCC  from "../Card/CardCC";
 
 class Rationale extends React.Component {
   render() {
@@ -101,7 +101,7 @@ class Rationale extends React.Component {
 
         <Route
           path="/:api/:page/:section/:subsection/:card"
-          component={Card}
+          component={CardCC}
         />
 
       </div>

@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { asyncSetCard } from '../../Redux/actions/cardActionsCreator';
 import { connect } from "react-redux";
+import CardPC from './CardPC';
+
 
 
 
@@ -41,7 +43,7 @@ class Card extends Component {
     render() {
         return (
             <div className='col-md-9' style={{ border: '1px solid black' }}>
-
+                <CardPC card={this.props.card} />
             </div>
         );
     }
