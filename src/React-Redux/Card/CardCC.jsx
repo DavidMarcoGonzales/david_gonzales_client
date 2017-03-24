@@ -43,7 +43,12 @@ class Card extends Component {
     render() {
         return (
             <div className='col-md-9' style={{ border: '1px solid black' }}>
-                <CardPC card={this.props.card} />
+                <CardPC 
+                    title={this.props.card.title} 
+                    question={this.props.card.question}
+                    conclusion={this.props.card.conclusion}
+                    answers={React.Children.toArray(this.props.card.answers) }
+                />
             </div>
         );
     }
