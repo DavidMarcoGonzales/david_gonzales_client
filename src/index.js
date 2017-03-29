@@ -1,3 +1,5 @@
+import 'babel-polyfill';
+
 import ReactDOM from "react-dom";
 import { BrowserRouter, NavLink, Route } from "react-router-dom";
 import React from "react";

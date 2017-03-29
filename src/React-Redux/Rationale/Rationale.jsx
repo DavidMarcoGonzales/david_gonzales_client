@@ -15,82 +15,82 @@ class Rationale extends React.Component {
             <Panel header="Physical Restraint" eventKey="1">
               <ListGroup >
                 <ListGroupItem >
-                  <NavLink to="/api/Rationale/Restraint/Need/page1">Reducing Need</NavLink>
+                  <NavLink to="/api/Rationale/Restraint/Need/1">Reducing Need</NavLink>
                 </ListGroupItem>
                 <ListGroupItem >
-                  <NavLink to="/api/Rationale/Restraint/Model/page1">Model</NavLink>
+                  <NavLink to="/api/Rationale/Restraint/Model/1">Model</NavLink>
                 </ListGroupItem>
                 <ListGroupItem >
-                  <NavLink to="/api/Rationale/Restraint/Milieu/page1">Therapeutic Milieu</NavLink>
+                  <NavLink to="/api/Rationale/Restraint/Milieu/1">Therapeutic Milieu</NavLink>
                 </ListGroupItem>
                 <ListGroupItem >
-                  <NavLink to="/api/Rationale/Restraint/Children/page1">Children</NavLink>
+                  <NavLink to="/api/Rationale/Restraint/Children/1">Children</NavLink>
                 </ListGroupItem>
                 <ListGroupItem >
-                  <NavLink to="/api/Rationale/Restraint/Relationship/page1">Therapeutic Relationship</NavLink>
+                  <NavLink to="/api/Rationale/Restraint/Relationship/1">Therapeutic Relationship</NavLink>
                 </ListGroupItem>
                 <ListGroupItem >
-                  <NavLink to="/api/Rationale/Restraint/Quiz/page1">Quiz</NavLink>
+                  <NavLink to="/api/Rationale/Restraint/Quiz/1">Quiz</NavLink>
                 </ListGroupItem>
               </ListGroup>
             </Panel>
             <Panel header="TCI Domains" eventKey="2">
               <ListGroup >
                 <ListGroupItem >
-                  <NavLink to="/api/Rationale/TCI/Model">Stress Model</NavLink>
+                  <NavLink to="/api/Rationale/TCI/Model/1">Stress Model</NavLink>
                 </ListGroupItem>
                 <ListGroupItem >
-                  <NavLink to="/api/Rationale/TCI/Awareness">Self-Awareness</NavLink>
+                  <NavLink to="/api/Rationale/TCI/Awareness/1">Self-Awareness</NavLink>
                 </ListGroupItem>
                 <ListGroupItem >
-                  <NavLink to="/api/Rationale/TCI/Child">Importance of Knowing the Child</NavLink>
+                  <NavLink to="/api/Rationale/TCI/Child/1">Importance of Knowing the Child</NavLink>
                 </ListGroupItem>
                 <ListGroupItem >
-                  <NavLink to="/api/Rationale/TCI/Environment">Importance of the Environment</NavLink>
+                  <NavLink to="/api/Rationale/TCI/Environment/1">Importance of the Environment</NavLink>
                 </ListGroupItem>
                 <ListGroupItem >
-                  <NavLink to="/api/Rationale/TCI/Skills">Importance of Skill Development</NavLink>
+                  <NavLink to="/api/Rationale/TCI/Skills/1">Importance of Skill Development</NavLink>
                 </ListGroupItem>
                 <ListGroupItem >
-                  <NavLink to="/api/Rationale/TCI/Quiz">Quiz</NavLink>
+                  <NavLink to="/api/Rationale/TCI/Quiz/1">Quiz</NavLink>
                 </ListGroupItem>
               </ListGroup>
             </Panel>
             <Panel header="Therapeutic Milieu" eventKey="3">
               <ListGroup >
                 <ListGroupItem >
-                  <NavLink to="/api/Rationale/Milieu/Listening">Active Listening</NavLink>
+                  <NavLink to="/api/Rationale/Milieu/Listening/1">Active Listening</NavLink>
                 </ListGroupItem>
                 <ListGroupItem >
-                  <NavLink to="/api/Rationale/Milieu/BehavioralSupport">Behavioral Support</NavLink>
+                  <NavLink to="/api/Rationale/Milieu/BehavioralSupport/1">Behavioral Support</NavLink>
                 </ListGroupItem>
                 <ListGroupItem >
-                  <NavLink to="/api/Rationale/Milieu/PowerStruggle">Power Struggles</NavLink>
+                  <NavLink to="/api/Rationale/Milieu/PowerStruggle/1">Power Struggles</NavLink>
                 </ListGroupItem>
                 <ListGroupItem >
-                  <NavLink to="/api/Rationale/Milieu/Quiz">Quiz</NavLink>
+                  <NavLink to="/api/Rationale/Milieu/Quiz/1">Quiz</NavLink>
                 </ListGroupItem>
               </ListGroup>
             </Panel>
             <Panel header="Children" eventKey="4">
               <ListGroup >
                 <ListGroupItem >
-                  <NavLink to="/api/Rationale/Children/Aggression">Aggressive Behavior</NavLink>
+                  <NavLink to="/api/Rationale/Children/Aggression/1">Aggressive Behavior</NavLink>
                 </ListGroupItem>
                 <ListGroupItem >
-                  <NavLink to="/api/Rationale/Children/NonVerbal">Non Verbal Communication</NavLink>
+                  <NavLink to="/api/Rationale/Children/NonVerbal/1">Non Verbal Communication</NavLink>
                 </ListGroupItem>
                 <ListGroupItem >
-                  <NavLink to="/Rationale/Children/PotentialViolence">Potential Violence</NavLink>
+                  <NavLink to="/Rationale/Children/PotentialViolence/1">Potential Violence</NavLink>
                 </ListGroupItem>
                 <ListGroupItem >
-                  <NavLink to="/api/Rationale/Children/CoRegulation">Crisis Co-regulation</NavLink>
+                  <NavLink to="/api/Rationale/Children/CoRegulation/1">Crisis Co-regulation</NavLink>
                 </ListGroupItem>
                 <ListGroupItem >
-                  <NavLink to="/api/Rationale/Children/LSI">Life Space Interview</NavLink>
+                  <NavLink to="/api/Rationale/Children/LSI/1">Life Space Interview</NavLink>
                 </ListGroupItem>
                 <ListGroupItem >
-                  <NavLink to="/api/Rationale/Children/Quiz">Quiz</NavLink>
+                  <NavLink to="/api/Rationale/Children/Quiz/1">Quiz</NavLink>
                 </ListGroupItem>
               </ListGroup>
             </Panel>

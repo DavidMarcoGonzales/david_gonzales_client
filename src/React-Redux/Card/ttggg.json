@@ -1,0 +1,110 @@
+{
+    "match": {
+        "path": "/:api/:page/:section/:subsection/:card",
+        "url": "/api/Rationale/Restraint/Model/1",
+        "isExact": true,
+        "params": {
+            "api": "api",
+            "page": "Rationale",
+            "section": "Restraint",
+            "subsection": "Model",
+            "card": "1"
+        }
+    },
+    "location": {
+        "pathname": "/api/Rationale/Restraint/Model/1",
+        "search": "",
+        "hash": "",
+        "key": "po78eb"
+    },
+    "history": {
+        "length": 26,
+        "action": "PUSH",
+        "location": {
+            "pathname": "/api/Rationale/Restraint/Model/1",
+            "search": "",
+            "hash": "",
+            "key": "po78eb"
+        }
+    },
+    "card": {
+        "_id": "58d61aff56f06974f2a9dfb9",
+        "url": "/api/Rationale/Restraint/Model/1",
+        "type": "body",
+        "title": "title",
+        "topic": "Why is it necessary to avoid placing clients in physical management?",
+        "conclusion": "With all the mounting evidence, is it really necessary to place clients into physical holds? Is there a better way?",
+        "rdfts": [
+            {
+                "_id": "58d61aff56f06974f2a9dfb3",
+                "rdft": "Although many people say physical management is done for safety, these techniques can be very deadly.",
+                "explainations": [
+                    {
+                        "_id": "58d61aff56f06974f2a9dfb4",
+                        "explaination": "Louis Rodriguez"
+                    },
+                    {
+                        "_id": "58d61aff56f06974f2a9dfb5",
+                        "explaination": "Eric Gardner"
+                    }
+                ]
+            },
+            {
+                "_id": "58d61aff56f06974f2a9dfb6",
+                "rdft": "Although many people say physical management is done for safety, these techniques can be very deadly.",
+                "explainations": [
+                    {
+                        "_id": "58d61aff56f06974f2a9dfb7",
+                        "explaination": "Louis Rodriguez"
+                    },
+                    {
+                        "_id": "58d61aff56f06974f2a9dfb8",
+                        "explaination": "Eric Gardner"
+                    }
+                ]
+            }
+        ],
+        "Vid": {
+            "_id": "58d61aff56f06974f2a9dfb2",
+            "type": "video",
+            "src": "somesrc",
+            "border": "1",
+            "width": "400",
+            "height": "200",
+            "frameborder": "0",
+            "allowfullscreen": "false"
+        }
+    }
+}
+
+
+[
+    {
+        "_id": "58d61aff56f06974f2a9dfb3",
+        "rdft": "Although many people say physical management is done for safety, these techniques can be very deadly.",
+        "explainations": [
+            {
+                "_id": "58d61aff56f06974f2a9dfb4",
+                "explaination": "Louis Rodriguez"
+            },
+            {
+                "_id": "58d61aff56f06974f2a9dfb5",
+                "explaination": "Eric Gardner"
+            }
+        ]
+    },
+    {
+        "_id": "58d61aff56f06974f2a9dfb6",
+        "rdft": "Although many people say physical management is done for safety, these techniques can be very deadly.",
+        "explainations": [
+            {
+                "_id": "58d61aff56f06974f2a9dfb7",
+                "explaination": "Louis Rodriguez"
+            },
+            {
+                "_id": "58d61aff56f06974f2a9dfb8",
+                "explaination": "Eric Gardner"
+            }
+        ]
+    }
+]

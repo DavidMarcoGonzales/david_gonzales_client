@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { PropTypes, Component } from 'react';
 import { asyncSetCard } from '../../Redux/actions/cardActionsCreator';
 import { connect } from "react-redux";
 import CardPC from './CardPC';
@@ -8,19 +8,20 @@ import CardPC from './CardPC';
 
 class Card extends Component {
 
+
     componentWillMount() {
+        console.log("componentWillMount")
         let myURI = ''; {
             let { api, page, section, subsection, card } = this.props.match.params;
             myURI = `/${api}/${page}/${section}/${subsection}/${card}`;
         }
-        
-        console.log(myURI);
-
+        console.log("json call 1")
         this.props.dispatch(asyncSetCard(myURI));
 
     }
 
     componentWillReceiveProps(nextProps) {
+        console.log("componentWillReceiveProps")
 
         let myURI = ''; {
             let { api, page, section, subsection, card } = this.props.match.params;
@@ -31,36 +32,33 @@ class Card extends Component {
             myNewURI = `/${api}/${page}/${section}/${subsection}/${card}`
         }
 
-        console.log(myURI);
-        console.log(myNewURI);
 
         if (myURI !== myNewURI) {
-            console.log('Card line 36')
+            console.log("json call 2")
             this.props.dispatch(asyncSetCard(myNewURI));
-        } else {console.log("not equal")}
+        } else { console.log("not equal") }
     }
 
     render() {
+        
         return (
             <div className='col-md-9' style={{ border: '1px solid black' }}>
-                <CardPC 
-                    title={this.props.card.title} 
-                    question={this.props.card.question}
-                    conclusion={this.props.card.conclusion}
-                    answers={React.Children.toArray(this.props.card.answers) }
+                {console.log("CardCC render before CardPC")}
+                <CardPC
+                   card={this.props.card}
                 />
+                {console.log("CardCC render after CardPC")}
             </div>
         );
     }
 }
 
 Card.propTypes = {
-    card: React.PropTypes.object.isRequired,
-    asyncSetCard: React.PropTypes.func
+    card: PropTypes.object.isRequired
 }
 function mapStateToProps(state) {
-    return ({
+    return {
         card: state.card
-    })
+    }
 }
 export default connect(mapStateToProps)(Card);
