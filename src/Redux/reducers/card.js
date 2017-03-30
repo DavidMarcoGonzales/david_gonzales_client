@@ -4,15 +4,16 @@ import initialState from './initialState';
 export default function card(state = initialState.card, action = {}) {
   switch (action.type) {
     case SET_CURRENT_CARD: {
-
-      return action.card;
+      state = action.card;
+      break;
     }
     case SET_CARD_SUCCESS: {
-
-      return action.card;
+      state = action.card;
+      break;
     }
-    default:
-
-      return state;
+    default: {
+      break;
+    }
   }
+  return state;
 }

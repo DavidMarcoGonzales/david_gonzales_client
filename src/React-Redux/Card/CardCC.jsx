@@ -46,6 +46,7 @@ class Card extends Component {
                 {console.log("CardCC render before CardPC")}
                 <CardPC
                    card={this.props.card}
+                   dispatch={this.props.dispatch}
                 />
                 {console.log("CardCC render after CardPC")}
             </div>

@@ -7,7 +7,6 @@ export function setCard(card) {
   return ({ type: SET_CURRENT_CARD, card: card });
 }
 export function setCardSuccess(card) {
-
   return ({ type: SET_CARD_SUCCESS, card: card });
 }
 
@@ -20,8 +19,6 @@ export function asyncSetCard(uri) {
         .catch(error => {
           throw (error);
         });
-
-
   };
 }
 

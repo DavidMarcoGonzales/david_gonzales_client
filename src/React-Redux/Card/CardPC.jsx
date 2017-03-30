@@ -1,33 +1,40 @@
 import React, { PropTypes, Component } from 'react';
-// import RDFTs from './ReasonDetailFactTransitions';
+import { NavLink } from "react-router-dom";
+import YouTube from 'react-youtube'
 
 class CardPC extends Component {
-    // constructor(props) {
-    //     super(props);
-    //     this.state = {
-    //         title: props.title,
-    //         topic: props.topic,
-    //         rdfts: props.rdfts,
-    //         conclusion: props.conclusion
-    //     }
-    // }
+
     render() {
+        const opts = {
+            height: '390',
+            width: '640',
+            playerVars: {
+                autoplay: 1
+            }
+        };
+        let uTubeVid = null;
+        if (this.props.card.vid.src !== "") {
+            uTubeVid = <YouTube
+                videoId={this.props.card.vid.src || ""}
+                opts={opts}
+            />
+        }
+        let myArray = null;
+        if (this.props.card.rdfts.length !== 0) {
+            myArray = <ul>
+                {this.props.card.rdfts.map((item, index) => <li key={index}>{item || ""}</li>)}
+            </ul>
+        }
         return (
             <div>
-                <h3>Title: {this.props.card.title}</h3>
-                <ul>
-                    <li>{this.props.card.vid.type}</li>
-                    <li>{this.props.card.vid.src}</li>
-                    <li>{this.props.card.vid.border}</li>
-                    <li>{this.props.card.vid.width}</li>
-                    <li>{this.props.card.vid.height}</li>
-                </ul>
-
-                <h4>Topic: {this.props.card.topic}</h4>
-                <h5>body: {this.props.card.accordBody}</h5>
-                <h5>Conclusion: {this.props.card.conclusion}</h5>
-                                {this.props.card.rdfts.map((item)=><h6>{item}</h6>)}
-
+                <h3>{this.props.card.title}</h3>
+                {uTubeVid}
+                <h4>{this.props.card.topic || ""}</h4>
+                {myArray}
+                <h5>{this.props.card.body || ""}</h5>
+                <h5>{this.props.card.conclusion || ""}</h5>
+                <NavLink to={this.props.card.prevURN || ""}>prev</NavLink>
+                <NavLink to={this.props.card.nextURN || ""}>Next</NavLink>
             </div>
         );
     }
@@ -37,37 +44,3 @@ CardPC.propTypes = {
 };
 
 export default CardPC;
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*import React from 'react';
-import Rdfts from './ReasonDetailFactTransitions'
-
-
-const CardPC = ({ title, topic, rdfts, conclusion }) => {
-    return (
-        <div>
-            <h2>Title: {title}</h2>
-            <h3>Topic: {topic}</h3>
-            <Rdfts rdfts={rdfts} />
-            <h3>Conclusion: {conclusion}</h3>
-        </div>
-    );
-};
-// CardPC.propTypes = {
-//     title: PropTypes.string.isRequired,
-//     topic: PropTypes.string.isRequired,
-//     rdfts: PropTypes.array.isRequired,
-//     conclusion: PropTypes.string.isRequired
-// };
-export default CardPC;*/
