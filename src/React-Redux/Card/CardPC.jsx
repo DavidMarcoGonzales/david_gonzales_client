@@ -19,64 +19,36 @@ class CardPC extends Component {
                 opts={opts}
             />
         }
-        let myArray1 = null;
-        if (this.props.card.rdfts1.length !== 0) {
-            myArray1 = <ul>
-                {this.props.card.rdfts1.map((item, index) => <li key={index}>{item || ""}</li>)}
-            </ul>
+        let getMyArray = (rdfts, topic) => {
+            return (<div>
+                <h3>{topic || ""}</h3>
+                <ul>
+                    {rdfts.map((item, index) => <li key={index}>{item || ""}</li>)}
+                </ul>
+            </div>)
         }
-        let myArray2 = null;
-        if (this.props.card.rdfts2.length !== 0) {
-            myArray2 = <ul>
-                {this.props.card.rdfts2.map((item, index) => <li key={index}>{item || ""}</li>)}
-            </ul>
-        }
-        let myArray3 = null;
-        if (this.props.card.rdfts3.length !== 0) {
-            myArray3 = <ul>
-                {this.props.card.rdfts3.map((item, index) => <li key={index}>{item || ""}</li>)}
-            </ul>
-        }
-        let myArray4 = null;
-        if (this.props.card.rdfts4.length !== 0) {
-            myArray4 = <ul>
-                {this.props.card.rdfts4.map((item, index) => <li key={index}>{item || ""}</li>)}
-            </ul>
-        }
-        let myArray5 = null;
-        if (this.props.card.rdfts5.length !== 0) {
-            myArray5 = <ul>
-                {this.props.card.rdfts5.map((item, index) => <li key={index}>{item || ""}</li>)}
-            </ul>
-        }
+        let { rdfts1, rdfts2, rdfts3, rdfts4, rdfts5 } = this.props.card;
+        let { topic1, topic2, topic3, topic4, topic5 } = this.props.card;
+        let myArray1 = (rdfts1.length !== 0) ? getMyArray(rdfts1, topic1) : null;
+        let myArray2 = (rdfts2.length !== 0) ? getMyArray(rdfts2, topic2) : null;
+        let myArray3 = (rdfts3.length !== 0) ? getMyArray(rdfts3, topic3) : null;
+        let myArray4 = (rdfts4.length !== 0) ? getMyArray(rdfts4, topic4) : null;
+        let myArray5 = (rdfts5.length !== 0) ? getMyArray(rdfts5, topic5) : null;
         return (
             <div>
-                <h3>{this.props.card.title}</h3>
+                <NavLink className="col-md-1 btn btn-primary pull-left" to={this.props.card.prevURN || ""}>prev</NavLink>
+                <NavLink className="col-md-1 btn btn-primary pull-right" to={this.props.card.nextURN || ""}>Next</NavLink>
+                <br />
+                <hr />
+                <h2>{this.props.card.title}</h2>
                 {uTubeVid}
-                <div>
-                <h4>{this.props.card.topic1 || ""}</h4>
                 {myArray1}
-                <div>
-                </div>
-                <h4>{this.props.card.topic2 || ""}</h4>
                 {myArray2}
-                <div>
-                </div>
-                <h4>{this.props.card.topic3 || ""}</h4>
                 {myArray3}
-                <div>
-                </div>
-                <h4>{this.props.card.topic4 || ""}</h4>
                 {myArray4}
-                <div>
-                </div>
-                <h4>{this.props.card.topic5 || ""}</h4>
                 {myArray5}
-                </div>
-                <h5>{this.props.card.body || ""}</h5>
-                <h5>{this.props.card.conclusion || ""}</h5>
-                <NavLink to={this.props.card.prevURN || ""}>prev</NavLink>
-                <NavLink to={this.props.card.nextURN || ""}>Next</NavLink>
+                <h3>{this.props.card.body || ""}</h3>
+                <h3>{this.props.card.conclusion || ""}</h3>
             </div>
         );
     }

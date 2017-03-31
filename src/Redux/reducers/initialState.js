@@ -5,7 +5,11 @@ export default {
 
   card: {
     vid:{},
-    rdfts:[]
+    rdfts1:[],
+    rdfts2:[],
+    rdfts3:[],
+    rdfts4:[],
+    rdfts5:[]
   }
 }
 
