@@ -3,6 +3,7 @@ import { NavLink } from "react-router-dom";
 import YouTube from 'react-youtube'
 
 class CardPC extends Component {
+    
 
     render() {
         const opts = {
@@ -29,11 +30,11 @@ class CardPC extends Component {
         }
         let { rdfts1, rdfts2, rdfts3, rdfts4, rdfts5 } = this.props.card;
         let { topic1, topic2, topic3, topic4, topic5 } = this.props.card;
-        let myArray1 = (rdfts1.length !== 0) ? getMyArray(rdfts1, topic1) : null;
-        let myArray2 = (rdfts2.length !== 0) ? getMyArray(rdfts2, topic2) : null;
-        let myArray3 = (rdfts3.length !== 0) ? getMyArray(rdfts3, topic3) : null;
-        let myArray4 = (rdfts4.length !== 0) ? getMyArray(rdfts4, topic4) : null;
-        let myArray5 = (rdfts5.length !== 0) ? getMyArray(rdfts5, topic5) : null;
+        let myArray1 = (topic1 !== "") ? getMyArray(rdfts1, topic1) : null;
+        let myArray2 = (topic2 !== "") ? getMyArray(rdfts2, topic2) : null;
+        let myArray3 = (topic3 !== "") ? getMyArray(rdfts3, topic3) : null;
+        let myArray4 = (topic4 !== "") ? getMyArray(rdfts4, topic4) : null;
+        let myArray5 = (topic5 !== "") ? getMyArray(rdfts5, topic5) : null;
         return (
             <div>
                 <NavLink className="col-md-1 btn btn-primary pull-left" to={this.props.card.prevURN || ""}>prev</NavLink>
