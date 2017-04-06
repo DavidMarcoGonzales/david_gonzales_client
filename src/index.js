@@ -12,7 +12,7 @@ import configureStore from "./Redux/store/configureStore";
 
 /* CSS */
 import "bootstrap/dist/css/bootstrap.css";
-import "bootstrap/dist/css/bootstrap-theme.css";
+// import "bootstrap/dist/css/bootstrap-theme.css";
 
 /* React-Redux */
 import Dashboard from "./React-Redux/Dashboard/Dashboard.jsx";
@@ -30,7 +30,7 @@ ReactDOM.render(
       <Provider store={store}>
 
         <div className="container">
-          <div className="navbar navbar-default" style={{ border: '1px solid red' }} >
+          <div className="navbar navbar-default" style={{ marginBottom: '0px' }} >
             <ul className="nav navbar-nav">
               <li className="nav"><NavLink to="/">Dashboard</NavLink></li>
               <li className="nav"><NavLink to="/api/Workbook">TCI Student Workbook</NavLink></li>

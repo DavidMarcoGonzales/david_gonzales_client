@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import YouTube from 'react-youtube'
 
 class CardPC extends Component {
-    
+
 
     render() {
         const opts = {
@@ -36,14 +36,14 @@ class CardPC extends Component {
         let myArray4 = (topic4 !== "") ? getMyArray(rdfts4, topic4) : null;
         let myArray5 = (topic5 !== "") ? getMyArray(rdfts5, topic5) : null;
         return (
-            <div>
+            <div style={{ minHeight: '500px' }}>
 
-                <NavLink className="col-md-1 btn btn-primary pull-left" to={this.props.card.prevURN || ""}>prev</NavLink>
+                <NavLink className="col-md-1 btn btn-primary pull-left" to={this.props.card.prevURN || ""}>Prev</NavLink>
                 <NavLink className="col-md-1 btn btn-primary pull-right" to={this.props.card.nextURN || ""}>Next</NavLink>
                 <br />
                 <hr />
-                    <h2 className="text-center">{this.props.card.title}</h2>
-            
+                <h2 className="text-left">{this.props.card.title}</h2>
+
                 {uTubeVid}
                 {myArray1}
                 {myArray2}

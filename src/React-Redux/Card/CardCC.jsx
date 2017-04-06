@@ -42,9 +42,9 @@ class Card extends Component {
     render() {
         
         return (
-            <div className='col-md-9' style={{ border: '1px solid black' }}>
+            <div className='col-md-9' style={{ border: '1px solid rgb(235,235,235)', marginBottom: '40px', paddingTop: '15px' }}>
                 {console.log("CardCC render before CardPC")}
-                <CardPC
+                <CardPC 
                    card={this.props.card}
                    dispatch={this.props.dispatch}
                 />
