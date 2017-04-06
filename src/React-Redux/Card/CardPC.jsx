@@ -37,11 +37,13 @@ class CardPC extends Component {
         let myArray5 = (topic5 !== "") ? getMyArray(rdfts5, topic5) : null;
         return (
             <div>
+
                 <NavLink className="col-md-1 btn btn-primary pull-left" to={this.props.card.prevURN || ""}>prev</NavLink>
                 <NavLink className="col-md-1 btn btn-primary pull-right" to={this.props.card.nextURN || ""}>Next</NavLink>
                 <br />
                 <hr />
-                <h2>{this.props.card.title}</h2>
+                    <h2 className="text-center">{this.props.card.title}</h2>
+            
                 {uTubeVid}
                 {myArray1}
                 {myArray2}

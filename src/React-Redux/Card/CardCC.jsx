@@ -15,7 +15,7 @@ class Card extends Component {
             let { api, page, section, subsection, card } = this.props.match.params;
             myURI = `/${api}/${page}/${section}/${subsection}/${card}`;
         }
-        console.log("json call 1")
+        console.log("json call 1", myURI)
         this.props.dispatch(asyncSetCard(myURI));
 
     }
