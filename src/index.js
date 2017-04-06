@@ -12,7 +12,7 @@ import configureStore from "./Redux/store/configureStore";
 
 /* CSS */
 import "bootstrap/dist/css/bootstrap.css";
-// import "bootstrap/dist/css/bootstrap-theme.css";
+import "bootstrap/dist/css/bootstrap-theme.css";
 
 /* React-Redux */
 import Dashboard from "./React-Redux/Dashboard/Dashboard.jsx";
