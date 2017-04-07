@@ -37,13 +37,15 @@ class CardPC extends Component {
         let myArray5 = (topic5 !== "") ? getMyArray(rdfts5, topic5) : null;
         return (
             <div style={{ minHeight: '500px' }}>
-
-                <NavLink className="col-md-1 btn btn-primary pull-left" to={this.props.card.prevURN || ""}>Prev</NavLink>
-                <NavLink className="col-md-1 btn btn-primary pull-right" to={this.props.card.nextURN || ""}>Next</NavLink>
-                <br />
-                <hr />
-                <h2 className="text-left">{this.props.card.title}</h2>
-
+                <nav className="navbar navbar-default">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                            <NavLink className="col-md-1 btn btn-primary pull-left" to={this.props.card.prevURN || ""}>Prev</NavLink>
+                            <p className="navbar-text  pull-left">{this.props.card.title}</p>
+                            <NavLink className="col-md-1 btn btn-primary pull-right" to={this.props.card.nextURN || ""}>Next</NavLink>
+                        </div>
+                    </div>
+                </nav>
                 {uTubeVid}
                 {myArray1}
                 {myArray2}
