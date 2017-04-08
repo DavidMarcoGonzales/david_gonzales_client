@@ -24,12 +24,12 @@ class Rationale extends React.Component {
             </Panel>
             <Panel header="2. Crisis as Oppertunity" eventKey="2" style={{ borderTop: '1px solid #333333', borderBottom: '1px solid black' }}>
               <div className="btn-group-vertical" style={{marginBottom: '0px', display: 'block' }}>
-                <NavLink className="btn btn-default btn-sm btn-block" style={{ textAlign: 'left'}}  to="/api/Workbook/TCI/Awareness/1">2.1 Stress Model of Crisis</NavLink>
-                <NavLink className="btn btn-default btn-sm btn-block" style={{ textAlign: 'left'}}  to="/api/Workbook/TCI/Model/1">2.2 Self-Awareness</NavLink>
-                <NavLink className="btn btn-default btn-sm btn-block" style={{ textAlign: 'left'}}  to="/api/Workbook/TCI/Child/1">2.3 Knowing the Child</NavLink>
-                <NavLink className="btn btn-default btn-sm btn-block" style={{ textAlign: 'left'}}  to="/api/Workbook/TCI/Environment/1">2.4 Environment</NavLink>
-                <NavLink className="btn btn-default btn-sm btn-block" style={{ textAlign: 'left'}}  to="/api/Workbook/TCI/Skills/1">2.5 Skill Development</NavLink>
-                <NavLink className="btn btn-default btn-sm btn-block" style={{ textAlign: 'left'}}  to="/api/Workbook/TCI/Quiz/1">Quiz</NavLink>
+                <NavLink className="btn btn-default btn-sm btn-block" style={{ textAlign: 'left'}}  to="/api/Workbook/Opportunity/StressModel/1">2.1 Stress Model of Crisis</NavLink>
+                <NavLink className="btn btn-default btn-sm btn-block" style={{ textAlign: 'left'}}  to="/api/Workbook/Opportunity/SelfAwareness/1">2.2 Self-Awareness</NavLink>
+                <NavLink className="btn btn-default btn-sm btn-block" style={{ textAlign: 'left'}}  to="/api/Workbook/Opportunity/Child/1">2.3 Knowing the Child</NavLink>
+                <NavLink className="btn btn-default btn-sm btn-block" style={{ textAlign: 'left'}}  to="/api/Workbook/Opportunity/Environment/1">2.4 Environment</NavLink>
+                <NavLink className="btn btn-default btn-sm btn-block" style={{ textAlign: 'left'}}  to="/api/Workbook/Opportunity/Skills/1">2.5 Skill Development</NavLink>
+                <NavLink className="btn btn-default btn-sm btn-block" style={{ textAlign: 'left'}}  to="/api/Workbook/Opportunity/Quiz/1">Quiz</NavLink>
               </div>
             </Panel>
             <Panel header="3. De-Escalating the Crisis" eventKey="3" style={{borderTop: '1px solid #333333', borderBottom: '1px solid black'}} >
