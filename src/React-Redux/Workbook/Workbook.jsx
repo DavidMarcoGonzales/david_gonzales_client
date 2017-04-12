@@ -34,30 +34,30 @@ class Rationale extends React.Component {
             </Panel>
             <Panel header="3. De-Escalating the Crisis" eventKey="3" style={{borderTop: '1px solid #333333', borderBottom: '1px solid black'}} >
               <div className="btn-group-vertical" style={{marginBottom: '0px', display: 'block' }}>
-                <NavLink className="btn btn-default btn-sm btn-block" style={{ textAlign: 'left'}}  to="/api/Workbook/Milieu/Listening/1">3.1 Active Listening</NavLink>
-                <NavLink className="btn btn-default btn-sm btn-block" style={{ textAlign: 'left'}}  to="/api/Workbook/Milieu/BehavioralSupport/1">3.2 Behavioral Support</NavLink>
-                <NavLink className="btn btn-default btn-sm btn-block" style={{ textAlign: 'left'}}  to="/api/Workbook/Milieu/CoRegEmFirstAid/1">3.3 Co-Reg/Emotional First Aid</NavLink>
-                <NavLink className="btn btn-default btn-sm btn-block" style={{ textAlign: 'left'}}  to="/api/Workbook/Milieu/ConflictCycle/1">3.4 Conflict Cycle</NavLink>
-                <NavLink className="btn btn-default btn-sm btn-block" style={{ textAlign: 'left'}}  to="/api/Workbook/Milieu/Quiz/1">Quiz</NavLink>
+                <NavLink className="btn btn-default btn-sm btn-block" style={{ textAlign: 'left'}}  to="/api/Workbook/DeEscCrisis/Listening/1">3.1 Active Listening</NavLink>
+                <NavLink className="btn btn-default btn-sm btn-block" style={{ textAlign: 'left'}}  to="/api/Workbook/DeEscCrisis/BehavioralSupport/1">3.2 Behavioral Support</NavLink>
+                <NavLink className="btn btn-default btn-sm btn-block" style={{ textAlign: 'left'}}  to="/api/Workbook/DeEscCrisis/CoRegEmFirstAid/1">3.3 Co-Reg/Emotional First Aid</NavLink>
+                <NavLink className="btn btn-default btn-sm btn-block" style={{ textAlign: 'left'}}  to="/api/Workbook/DeEscCrisis/ConflictCycle/1">3.4 Conflict Cycle</NavLink>
+                <NavLink className="btn btn-default btn-sm btn-block" style={{ textAlign: 'left'}}  to="/api/Workbook/DeEscCrisis/Quiz/1">Quiz</NavLink>
               </div>
             </Panel>
             <Panel header="4. Managing Crisis" eventKey="4" style={{borderTop: '1px solid #333333', borderBottom: '1px solid black' }}>
               <div className="btn-group-vertical" style={{marginBottom: '0px', display: 'block' }}>
-                <NavLink className="btn btn-default btn-sm btn-block" style={{ textAlign: 'left'}}  to="/api/Workbook/Children/Aggression/1">4.1 Aggressive Behavior</NavLink>
-                <NavLink className="btn btn-default btn-sm btn-block" style={{ textAlign: 'left'}}  to="/api/Workbook/Children/NonVerbal/1">4.2 Non Verbal Communication</NavLink>
-                <NavLink className="btn btn-default btn-sm btn-block" style={{ textAlign: 'left'}}  to="/api/Workbook/Children/PotentialViolence/1">4.3 Potential Violence</NavLink>
-                <NavLink className="btn btn-default btn-sm btn-block" style={{ textAlign: 'left'}}  to="/api/Workbook/Children/CoRegulation/1">4.4 Crisis Co-regulation</NavLink>
-                <NavLink className="btn btn-default btn-sm btn-block" style={{ textAlign: 'left'}}  to="/api/Workbook/Children/LSI/1">4.5 Life Space Interview</NavLink>
-                <NavLink className="btn btn-default btn-sm btn-block" style={{ textAlign: 'left'}}  to="/api/Workbook/Children/Quiz/1">Quiz</NavLink>
+                <NavLink className="btn btn-default btn-sm btn-block" style={{ textAlign: 'left'}}  to="/api/Workbook/ManageCrisis/Aggression/1">4.1 Aggressive Behavior</NavLink>
+                <NavLink className="btn btn-default btn-sm btn-block" style={{ textAlign: 'left'}}  to="/api/Workbook/ManageCrisis/NonVerbal/1">4.2 Non Verbal Communication</NavLink>
+                <NavLink className="btn btn-default btn-sm btn-block" style={{ textAlign: 'left'}}  to="/api/Workbook/ManageCrisis/PotentialViolence/1">4.3 Potential Violence</NavLink>
+                <NavLink className="btn btn-default btn-sm btn-block" style={{ textAlign: 'left'}}  to="/api/Workbook/ManageCrisis/CoRegulation/1">4.4 Crisis Co-regulation</NavLink>
+                <NavLink className="btn btn-default btn-sm btn-block" style={{ textAlign: 'left'}}  to="/api/Workbook/ManageCrisis/LSI/1">4.5 Life Space Interview</NavLink>
+                <NavLink className="btn btn-default btn-sm btn-block" style={{ textAlign: 'left'}}  to="/api/Workbook/ManageCrisis/Quiz/1">Quiz</NavLink>
               </div>
             </Panel>
             <Panel header="5. Safety Intervention" eventKey="5" style={{borderTop: '1px solid #333333', borderBottom: '1px solid black' }}>
               <div className="btn-group-vertical" style={{marginBottom: '0px', display: 'block' }}>
-                <NavLink className="btn btn-default btn-sm btn-block" style={{ textAlign: 'left'}}  to="/api/Workbook/Children/Intervention/1">5.1 Choosing an Intervention</NavLink>
-                <NavLink className="btn btn-default btn-sm btn-block" style={{ textAlign: 'left'}}  to="/api/Workbook/Children/SafetyConcerns/1">5.2 Safety Concerns</NavLink>
-                <NavLink className="btn btn-default btn-sm btn-block" style={{ textAlign: 'left'}}  to="/api/Workbook/Children/Documentation/1">5.3 Documentation</NavLink>
-                <NavLink className="btn btn-default btn-sm btn-block" style={{ textAlign: 'left'}}  to="/api/Workbook/Children/Recovery/1">5.4 Recovery</NavLink>
-                <NavLink className="btn btn-default btn-sm btn-block" style={{ textAlign: 'left'}}  to="/api/Workbook/Children/Recovery/1">Quiz</NavLink>
+                <NavLink className="btn btn-default btn-sm btn-block" style={{ textAlign: 'left'}}  to="/api/Workbook/Safety/Intervention/1">5.1 Choosing an Intervention</NavLink>
+                <NavLink className="btn btn-default btn-sm btn-block" style={{ textAlign: 'left'}}  to="/api/Workbook/Safety/SafetyConcerns/1">5.2 Safety Concerns</NavLink>
+                <NavLink className="btn btn-default btn-sm btn-block" style={{ textAlign: 'left'}}  to="/api/Workbook/Safety/Documentation/1">5.3 Documentation</NavLink>
+                <NavLink className="btn btn-default btn-sm btn-block" style={{ textAlign: 'left'}}  to="/api/Workbook/Safety/Recovery/1">5.4 Recovery</NavLink>
+                <NavLink className="btn btn-default btn-sm btn-block" style={{ textAlign: 'left'}}  to="/api/Workbook/Safety/Recovery/1">Quiz</NavLink>
               </div>
             </Panel>
           </Accordion>
