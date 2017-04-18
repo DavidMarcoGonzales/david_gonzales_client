@@ -57,7 +57,7 @@ class Rationale extends React.Component {
                 <NavLink className="btn btn-default btn-sm btn-block" style={{ textAlign: 'left'}}  to="/api/Workbook/Safety/SafetyConcerns/1">5.2 Safety Concerns</NavLink>
                 <NavLink className="btn btn-default btn-sm btn-block" style={{ textAlign: 'left'}}  to="/api/Workbook/Safety/Documentation/1">5.3 Documentation</NavLink>
                 <NavLink className="btn btn-default btn-sm btn-block" style={{ textAlign: 'left'}}  to="/api/Workbook/Safety/Recovery/1">5.4 Recovery</NavLink>
-                <NavLink className="btn btn-default btn-sm btn-block" style={{ textAlign: 'left'}}  to="/api/Workbook/Safety/Recovery/1">Quiz</NavLink>
+                <NavLink className="btn btn-default btn-sm btn-block" style={{ textAlign: 'left'}}  to="/api/Workbook/Safety/Quiz/1">Quiz</NavLink>
               </div>
             </Panel>
           </Accordion>
