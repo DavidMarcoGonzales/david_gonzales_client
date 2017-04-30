@@ -1,7 +1,7 @@
 import 'babel-polyfill';
 
 import ReactDOM from "react-dom";
-import { BrowserRouter, Route, Redirect } from "react-router-dom";
+import { BrowserRouter, Route, Redirect, Switch } from "react-router-dom";
 import React from "react";
 import { Provider } from "react-redux";
 
@@ -39,8 +39,10 @@ ReactDOM.render(
       <BrowserRouter >
         <div>
           {/*<Route exact path="/" render={() => (<Redirect to="/dashboard" />)} />*/}
+          <Switch>
           <Route path="/login" component={Login} />
           <PrivateRoute path="/" component={TCIApp} />
+          </Switch>
         </div>
       </BrowserRouter>
     </Provider>

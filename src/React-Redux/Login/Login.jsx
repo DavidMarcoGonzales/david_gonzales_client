@@ -24,14 +24,15 @@ class Login extends Component {
   }
   login(e) {
     e.preventDefault();
-    axios.post("https://david-gonzales-1.herokuapp.com/login", {
+    
+//    axios.post("https://david-gonzales-1.herokuapp.com/login", {
+    axios.post("/login", {
       username: this.state.username,
       password: this.state.password
     }).then(response => {
 
       saveJWT(response.data)
       this.setState({ redirectToReferrer: true })
-      // < Redirect to= "/dashboard" /> 
 
     }).catch(error => {
       throw (error);

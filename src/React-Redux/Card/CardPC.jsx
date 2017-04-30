@@ -38,13 +38,9 @@ class CardPC extends Component {
         return (
             <div style={{ minHeight: '500px' }}>
                 <nav className="navbar navbar-default">
-                    <div class="container-fluid">
-                        <div class="navbar-header">
-                            <NavLink className="col-md-1 btn btn-primary pull-left" to={this.props.card.prevURN || ""}>Prev</NavLink>
-                            <p className="navbar-text  pull-left">{this.props.card.title}</p>
-                            <NavLink className="col-md-1 btn btn-primary pull-right" to={this.props.card.nextURN || ""}>Next</NavLink>
-                        </div>
-                    </div>
+                    <NavLink className="col-md-1 btn btn-primary pull-left" to={this.props.card.prevURN || ""}>Prev</NavLink>
+                    <p className="navbar-text  pull-left">{this.props.card.title}</p>
+                    <NavLink className="col-md-1 btn btn-primary pull-right" to={this.props.card.nextURN || ""}>Next</NavLink>
                 </nav>
                 {uTubeVid}
                 {myArray1}
