@@ -12,7 +12,9 @@ export function setCardSuccess(card) {
 
 export function asyncSetCard(uri) {
   return (dispatch) => {
-      axios.get(`https://david-gonzales-1.herokuapp.com${uri}`)
+//      axios.get(uri)  // when testing local server 3000 and when deploying no cors
+console.log(`https://david-gonzales-1.herokuapp.com${uri}`);
+      axios.get(`https://david-gonzales-1.herokuapp.com${uri}`)  // when testing client against heroku server with cors
         .then(response => {
           dispatch(setCardSuccess(response.data[0]));
         })

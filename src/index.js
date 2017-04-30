@@ -1,13 +1,13 @@
 import 'babel-polyfill';
 
 import ReactDOM from "react-dom";
-import { BrowserRouter, NavLink, Route } from "react-router-dom";
+import { BrowserRouter, Route, Redirect } from "react-router-dom";
 import React from "react";
 import { Provider } from "react-redux";
 
 import configureStore from "./Redux/store/configureStore";
 
-
+import { getJWT } from "./Redux/store/localStorage";
 
 
 /* CSS */
@@ -15,38 +15,35 @@ import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/css/bootstrap-theme.css";
 
 /* React-Redux */
-import Dashboard from "./React-Redux/Dashboard/Dashboard.jsx";
-import Workbook from "./React-Redux/Workbook/Workbook.jsx";
-import Situational_Awareness from "./React-Redux/Situational_Awareness/Situational_Awareness.jsx";
-import Assessment from "./React-Redux/Assessment/Assessment.jsx";
-import About from "./React-Redux/About/About.jsx";
+import Login from "./React-Redux/Login/Login.jsx";
+import TCIApp from './React-Redux/TCIApp/TCIApp.jsx';
 
 
 const store = configureStore();
 
+const PrivateRoute = ({ component: Component, ...rest }) => (
+  <Route {...rest} render={props => (
+    getJWT() ? (
+      <Component {...props} />
+    ) : (
+        <Redirect to={{
+          pathname: '/login',
+          state: { from: props.location }
+        }} />
+      )
+  )} />
+)
 ReactDOM.render(
   (
-    <BrowserRouter >
-      <Provider store={store}>
-
-        <div className="container">
-          <div className="navbar navbar-default" style={{ marginBottom: '0px' }} >
-            <ul className="nav navbar-nav">
-              <li className="nav"><NavLink to="/">Dashboard</NavLink></li>
-              <li className="nav"><NavLink to="/api/Workbook">TCI Student Workbook</NavLink></li>
-              <li className="nav"><NavLink to="/api/Situational_Awareness">Situational Awareness</NavLink></li>
-              <li className="nav"><NavLink to="/api/Assessment">Assessment</NavLink></li>
-              <li className="nav"><NavLink to="/about">About</NavLink></li>
-            </ul>
-          </div>
-          <Route exact path="/" component={Dashboard} />
-          <Route path="/api/Workbook" component={Workbook} />
-          <Route path="/api/Situational_Awareness" component={Situational_Awareness} />
-          <Route path="/api/Assessment" component={Assessment} />
-          <Route path="/about" component={About} />
+    <Provider store={store}>
+      <BrowserRouter >
+        <div>
+          {/*<Route exact path="/" render={() => (<Redirect to="/dashboard" />)} />*/}
+          <Route path="/login" component={Login} />
+          <PrivateRoute path="/" component={TCIApp} />
         </div>
-      </Provider>
-    </BrowserRouter>
+      </BrowserRouter>
+    </Provider>
   ),
   document.getElementById('root')
 );
