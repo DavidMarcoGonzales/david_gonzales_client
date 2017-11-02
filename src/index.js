@@ -21,28 +21,31 @@ import TCIApp from './React-Redux/TCIApp/TCIApp.jsx';
 
 const store = configureStore();
 
-const PrivateRoute = ({ component: Component, ...rest }) => (
-  <Route {...rest} render={props => (
-    getJWT() ? (
-      <Component {...props} />
-    ) : (
-        <Redirect to={{
-          pathname: '/login',
-          state: { from: props.location }
-        }} />
-      )
-  )} />
-)
+// const PrivateRoute = ({ component: Component, ...rest }) => (
+//   <Route {...rest} render={props => (
+//     getJWT() ? (
+//       <Component {...props} />
+//     ) : (
+//         <Redirect to={{
+//           pathname: '/login',
+//           state: { from: props.location }
+//         }} />
+//       )
+//   )} />
+// )
 ReactDOM.render(
   (
     <Provider store={store}>
       <BrowserRouter >
         <div>
           {/*<Route exact path="/" render={() => (<Redirect to="/dashboard" />)} />*/}
-          <Switch>
+          {/* <Switch>
           <Route path="/login" component={Login} />
           <PrivateRoute path="/" component={TCIApp} />
-          </Switch>
+          </Switch>           */}
+
+          <Route path="/" component={TCIApp} />
+
         </div>
       </BrowserRouter>
     </Provider>
