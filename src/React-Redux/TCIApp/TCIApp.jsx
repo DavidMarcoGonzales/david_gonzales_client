@@ -13,11 +13,11 @@ class TCIApp extends Component {
       <div className="container">
         <div className="navbar navbar-default" style={{ marginBottom: '0px' }} >
           <ul className="nav navbar-nav">
-            <li className="nav"><NavLink to="/dashboard">Dashboard</NavLink></li>
+            {/* <li className="nav"><NavLink to="/dashboard">Dashboard</NavLink></li> */}
             <li className="nav"><NavLink to="/api/Workbook">TCI Student Workbook</NavLink></li>
-            <li className="nav"><NavLink to="/api/Situational_Awareness">Situational Awareness</NavLink></li>
+            {/* <li className="nav"><NavLink to="/api/Situational_Awareness">Situational Awareness</NavLink></li>
             <li className="nav"><NavLink to="/api/Assessment">Assessment</NavLink></li>
-            <li className="nav"><NavLink to="/about">About</NavLink></li>
+            <li className="nav"><NavLink to="/about">About</NavLink></li> */}
           </ul>
         </div>
         <Route exact path="/dashboard" component={Dashboard} />
