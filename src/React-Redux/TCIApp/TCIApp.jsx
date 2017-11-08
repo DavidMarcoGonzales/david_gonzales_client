@@ -20,11 +20,11 @@ class TCIApp extends Component {
             <li className="nav"><NavLink to="/about">About</NavLink></li> */}
           </ul>
         </div>
-        <Route exact path="/dashboard" component={Dashboard} />
+        {/* <Route exact path="/dashboard" component={Dashboard} /> */}
         <Route path="/api/Workbook" component={Workbook} />
-        <Route path="/api/Situational_Awareness" component={Situational_Awareness} />
-        <Route path="/api/Assessment" component={Assessment} />
-        <Route path="/about" component={About} />
+        {/* <Route path="/api/Situational_Awareness" component={Situational_Awareness} /> */}
+        {/* <Route path="/api/Assessment" component={Assessment} /> */}
+        {/* <Route path="/about" component={About} /> */}
       </div>
     );
   }

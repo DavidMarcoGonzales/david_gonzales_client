@@ -14,11 +14,11 @@ class Rationale extends React.Component {
           <Accordion >
             <Panel header="1. Crisis Prevention" eventKey="1" style={{borderTop: '1px solid #333333', borderBottom: '1px solid black'}} >
               <div className="btn-group-vertical" style={{marginBottom: '0px', display: 'block' }}>
-                <NavLink className="btn btn-default btn-sm btn-block" style={{ textAlign: 'left'}} to="/api/Workbook/Prevention/Need/1">1.1 Reducing Need</NavLink>
-                <NavLink className="btn btn-default btn-sm btn-block" style={{ textAlign: 'left'}} to="/api/Workbook/Prevention/Model/1">1.2 Eliminating Need</NavLink>
-                <NavLink className="btn btn-default btn-sm btn-block" style={{ textAlign: 'left'}} to="/api/Workbook/Prevention/Milieu/1">1.3 Therapeutic Milieu</NavLink>
-                <NavLink className="btn btn-default btn-sm btn-block" style={{ textAlign: 'left'}} to="/api/Workbook/Prevention/Children/1">1.4 Children</NavLink>
-                <NavLink className="btn btn-default btn-sm btn-block" style={{ textAlign: 'left'}} to="/api/Workbook/Prevention/Relationship/1">1.5 Therapeutic Relationship</NavLink>
+                <NavLink activeStyle={{color: 'green'}} className="btn btn-default btn-sm btn-block" style={{ textAlign: 'left'}} to="/api/Workbook/Prevention/Need/1">1.1 Reducing Need</NavLink>
+                <NavLink activeStyle={{color: 'green'}} className="btn btn-default btn-sm btn-block" style={{ textAlign: 'left'}} to="/api/Workbook/Prevention/Model/1">1.2 Eliminating Need</NavLink>
+                <NavLink activeStyle={{color: 'green'}} className="btn btn-default btn-sm btn-block" style={{ textAlign: 'left'}} to="/api/Workbook/Prevention/Milieu/1">1.3 Therapeutic Milieu</NavLink>
+                <NavLink activeStyle={{color: 'green'}} className="btn btn-default btn-sm btn-block" style={{ textAlign: 'left'}} to="/api/Workbook/Prevention/Children/1">1.4 Children</NavLink>
+                <NavLink activeStyle={{color: 'green'}} className="btn btn-default btn-sm btn-block" style={{ textAlign: 'left'}} to="/api/Workbook/Prevention/Relationship/1">1.5 Therapeutic Relationship</NavLink>
                 {/*<NavLink className="btn btn-default btn-sm btn-block" style={{ textAlign: 'left'}} to="/api/Workbook/Prevention/Quiz/1">Quiz</NavLink>*/}
               </div>
             </Panel>
