@@ -6,6 +6,9 @@ class Card extends Component {
     componentWillMount() {
         let myURI = ''; {
             let { api, page, section, subsection, card } = this.props.match.params;
+            console.log(card);
+            if (card === undefined)
+             card=1;
             myURI = `/${api}/${page}/${section}/${subsection}/${card}`;
         }
         this.props.dispatch(asyncSetCard(myURI));
@@ -13,10 +16,16 @@ class Card extends Component {
     componentWillReceiveProps(nextProps) {
         let myURI = ''; {
             let { api, page, section, subsection, card } = this.props.match.params;
+            console.log(card);
+            if (card === undefined)
+            card=1;
             myURI = `/${api}/${page}/${section}/${subsection}/${card}`;
         }
         let myNewURI = ''; {
             let { api, page, section, subsection, card } = nextProps.match.params;
+            console.log(card);
+            if (card === undefined)
+            card=1;
             myNewURI = `/${api}/${page}/${section}/${subsection}/${card}`
         }
         if (myURI !== myNewURI) {
