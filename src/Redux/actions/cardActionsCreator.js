@@ -1,6 +1,6 @@
 import { SET_CURRENT_CARD, SET_CARD_SUCCESS } from "./actionTypes";
 import axios from 'axios';
-import { getJWT } from '../store/localStorage';
+
 import { development } from "../../config";
 
 export function setCard(card) {
@@ -16,8 +16,8 @@ export function asyncSetCard(uri) {
     if (development) {
       uri = `https://david-gonzales-1.herokuapp.com${uri}`
     }
-    axios.get(uri, { headers: { Authorization: `Bearer ${getJWT()}` } })  // when testing local server 3000 and when deploying no cors
-      .then(response => {
+    axios.get(uri)  // when testing local server 3000 and when deploying no cors
+    .then(response => {
         dispatch(setCardSuccess(response.data[0]));
       })
       .catch(error => {
