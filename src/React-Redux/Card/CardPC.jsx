@@ -1,25 +1,25 @@
 import React, { PropTypes, Component } from 'react';
 import { NavLink } from "react-router-dom";
-import YouTube from 'react-youtube'
+// import YouTube from 'react-youtube'
 
 class CardPC extends Component {
 
 
     render() {
-        const opts = {
-            height: '390',
-            width: '640',
-            playerVars: {
-                autoplay: 1
-            }
-        };
-        let uTubeVid = null;
-        if (this.props.card.vid.src !== "") {
-            uTubeVid = <YouTube
-                videoId={this.props.card.vid.src || ""}
-                opts={opts}
-            />
-        }
+        // const opts = {
+        //     height: '390',
+        //     width: '640',
+        //     playerVars: {
+        //         autoplay: 1
+        //     }
+        // };
+        // let uTubeVid = null;
+        // if (this.props.card.vid.src !== "") {
+        //     uTubeVid = <YouTube
+        //         videoId={this.props.card.vid.src || ""}
+        //         opts={opts}
+        //     />
+        // }
         let getMyArray = (rdfts, topic) => {
             return (<div>
                 <h3>{topic || ""}</h3>
@@ -42,7 +42,7 @@ class CardPC extends Component {
                     <p className="navbar-text  pull-left">{this.props.card.title}</p>
                     <NavLink className="col-md-1 btn btn-primary pull-right" to={this.props.card.nextURN || ""}>Next</NavLink>
                 </nav>
-                {uTubeVid}
+                {/* {uTubeVid} */}
                 {myArray1}
                 {myArray2}
                 {myArray3}
