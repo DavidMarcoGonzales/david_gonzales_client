@@ -6,8 +6,8 @@ import React from "react";
 import { Provider } from "react-redux";
 
 import configureStore from "./Redux/store/configureStore";
-import "bootstrap/dist/css/bootstrap.css";
-import "bootstrap/dist/css/bootstrap-theme.css";
+
+import "../css/main.css";
 
 /* React-Redux */
 import App from './React-Redux/App/App.jsx';
