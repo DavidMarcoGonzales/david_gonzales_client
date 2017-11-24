@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 
 import Workbook from "../Workbook/Workbook.jsx";
-import CoursesPage from "../React-Redux-Test/CoursesPage";
+// import CoursesPage from "../React-Redux-Test/CoursesPage";
+import CoursesPage from "../../React-Redux/React-Redux-Test/CoursesPage";
 import {  NavLink, Route } from "react-router-dom";
 
 class App extends Component {
