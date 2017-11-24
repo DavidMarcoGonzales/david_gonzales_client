@@ -4,7 +4,8 @@
 import { Route, NavLink } from "react-router-dom";
 import React from "react";
 import { Accordion, Panel } from "react-bootstrap";
-import CardCC from "../Card/CardCC";
+// import CardCC from "../Card/CardCC";
+import CardCC from "../../React-Redux/Card/CardCC";
 const actStyle={color: '#2780E3'};
 
 class Rationale extends React.Component {

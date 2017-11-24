@@ -10,7 +10,7 @@ import configureStore from "./Redux/store/configureStore";
 import "../css/main.css";
 
 /* React-Redux */
-import App from './React-Redux/App/App.jsx';
+import App from './React/App/App.jsx';
 
 
 const store = configureStore();
