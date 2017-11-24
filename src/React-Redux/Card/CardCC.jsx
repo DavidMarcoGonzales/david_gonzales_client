@@ -1,5 +1,5 @@
 import React, { PropTypes, Component } from 'react';
-import { asyncSetCard } from '../../Redux/actions/cardActionsCreator';
+import { asyncSetCard } from './cardActions';
 import { connect } from "react-redux";
 import CardPC from './CardPC';
 class Card extends Component {

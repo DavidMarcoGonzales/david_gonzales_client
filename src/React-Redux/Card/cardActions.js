@@ -4,7 +4,6 @@ import axios from 'axios';
 import { development } from "../../config";
 
 export function setCard(card) {
-
   return ({ type: SET_CURRENT_CARD, card: card });
 }
 export function setCardSuccess(card) {

@@ -1,4 +1,4 @@
-import { SET_CURRENT_CARD, SET_CARD_SUCCESS } from "../actions/actionTypes";
+import { SET_CURRENT_CARD, SET_CARD_SUCCESS } from "./actionTypes";
 import initialState from './initialState';
 
 export default function card(state = initialState.card, action = {}) {
