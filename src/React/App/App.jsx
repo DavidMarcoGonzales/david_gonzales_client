@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 
 import Workbook from "../Workbook/Workbook.jsx";
 // Test Test Test (Start) Test Test Test
-import CoursesPage from "../../React-Redux/React-Redux-Test/CoursesPage";
+import CoursesPage from "../../React-Redux/New-Component/CoursesPage";
 // Test Test Test ( End ) Test Test Test
 
 import { NavLink, Route } from "react-router-dom";
