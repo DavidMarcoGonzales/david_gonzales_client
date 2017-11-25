@@ -13,7 +13,6 @@ import App from './React/App/App.jsx';
 
 const store = configureStore();
 import  {loadCourses} from "./React-Redux/New-Component/courseActions"
-
 store.dispatch(loadCourses());
 
 ReactDOM.render(

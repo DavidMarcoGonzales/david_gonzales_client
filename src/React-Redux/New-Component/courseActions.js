@@ -2,7 +2,7 @@ import * as types from './actionTypes';
 import courseApi from "./api/mockCourseApi";
 
 export function loadCoursesSuccess(courses) {
-  debugger;
+  // debugger;
   return { type: types.LOAD_COURSES_SUCCESS, courses: courses }
 }
 
