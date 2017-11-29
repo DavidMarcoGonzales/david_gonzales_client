@@ -1,10 +1,20 @@
 import * as types from './actionTypes';
+import initialState from '../../Redux/store/initialState';
 
-export default function courseReducer(state = [], action) {
-  switch(action.type){
+export default function courseReducer(state = initialState.courses, action) {
+  switch (action.type) {
     case types.LOAD_COURSES_SUCCESS:
-      // debugger;
       return action.courses;
+    case types.CREATE_COURSE_SUCCESS:
+      return [
+        ...state,
+        Object.assign({}, action.course)
+      ];
+    case types.UPDATE_COURSE_SUCCESS:
+      return [
+        ...state.filter(course => course.id !== action.course.id),
+        Object.assign({}, action.course)
+      ];
     default:
       return state;
   }

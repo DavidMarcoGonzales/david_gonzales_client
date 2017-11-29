@@ -1,4 +1,5 @@
-import React, {PropTypes} from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import {bindActionCreators} from 'redux';
 import * as courseActions from './courseActions';
@@ -12,11 +13,9 @@ class CoursesPage extends React.Component {
 
   render() {
     const {courses} = this.props;
-    // debugger;
     return (
       <div>
         <h1>Courses</h1>
-        {/* {courses.map(this.courseRow)} */}
         <CourseList courses={courses}/>
       </div>
     );
@@ -27,13 +26,11 @@ CoursesPage.propTypes = {
   actions: PropTypes.object.isRequired
 }
 const mapStateToProps = (state, ownProps) => {
-  // debugger;
   return {
     courses: state.courses
   }
 }
 const mapDispatchToProps = (dispatch, ownProps) => {
-  // debugger;
   return {
     actions: bindActionCreators(courseActions, dispatch)
   }

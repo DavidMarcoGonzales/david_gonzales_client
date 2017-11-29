@@ -1,5 +1,5 @@
 import { SET_CURRENT_CARD, SET_CARD_SUCCESS } from "./actionTypes";
-import initialState from './initialState';
+import initialState from '../../Redux/store/initialState';
 
 export default function card(state = initialState.card, action = {}) {
   switch (action.type) {
