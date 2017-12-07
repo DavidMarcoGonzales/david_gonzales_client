@@ -12,8 +12,8 @@ import App from './React/App/App.jsx';
 
 
 const store = configureStore();
-import  {loadCourses} from "./React-Redux/New-Component/courseActions";
-import {loadAuthors} from "./React-Redux/New-Component/authorActions";
+import  {loadCourses} from "./React-Redux/New-Component/Redux/actions/courseActions";
+import {loadAuthors} from "./React-Redux/New-Component/Redux/actions/authorActions";
 store.dispatch(loadCourses());
 store.dispatch(loadAuthors());
 

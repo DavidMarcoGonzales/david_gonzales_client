@@ -1,6 +1,6 @@
 import React, {  Component } from 'react';
 import PropTypes from 'prop-types';
-import { asyncSetCard } from './cardActions';
+import { asyncSetCard } from './Redux/actions/cardActions';
 import { connect } from "react-redux";
 import CardPC from './CardPC';
 class Card extends Component {

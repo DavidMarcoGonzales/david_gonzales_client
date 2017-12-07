@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 
 import Workbook from "../Workbook/Workbook.jsx";
-import CoursesPage from "../../React-Redux/New-Component/CoursesPage";
-import ManageCoursePage from '../../React-Redux/New-Component/ManageCoursePage';
+import CoursesPage from "../../React-Redux/New-Component/CoursesPage/CoursesPage";
+import ManageCoursePage from '../../React-Redux/New-Component/CoursePage/CoursePage';
 
 import { NavLink, Route } from "react-router-dom";
 
@@ -14,7 +14,6 @@ class App extends Component {
           <ul className="nav navbar-nav">
             <li className="nav"><NavLink to="/api/Workbook">TCI Student Workbook</NavLink></li>
             <li className="nav"><NavLink to="/api/courses">Courses</NavLink></li>
-
           </ul>
         </div>
         <switch>
