@@ -4,7 +4,7 @@
 import { Route, NavLink } from "react-router-dom";
 import React from "react";
 import { Accordion, Panel } from "react-bootstrap";
-import VidCard from "../VidCard/VidCard";
+import VidCard from "../../React-Redux/Card/VidCard"
 const actStyle = { color: '#2780E3' };
 
 class TriggerManagement extends React.Component {
@@ -38,14 +38,14 @@ class TriggerManagement extends React.Component {
 
             <Panel header="Stress Model" eventKey="7" style={{ borderTop: '1px solid #333333', borderBottom: '1px solid black' }}>
               <div className="btn-group-vertical" style={{ marginBottom: '0px', display: 'block' }}>
-                <NavLink activeStyle={actStyle} className={navLinkFormatting} style={navLinkStyle} to="/api/Workbook/Eleviating/Intervention">Baseline</NavLink>  {/* ICMP, */}
-                <NavLink activeStyle={actStyle} className={navLinkFormatting} style={navLinkStyle} to="/api/Workbook/Eleviating/Intervention">Missing Co-regulation</NavLink>  {/* */}
-                <NavLink activeStyle={actStyle} className={navLinkFormatting} style={navLinkStyle} to="/api/Workbook/Eleviating/SafetyConcerns">Trigger</NavLink>  {/* Personal Setting Conditions, Environmental Setting Conditions*/}
-                <NavLink activeStyle={actStyle} className={navLinkFormatting} style={navLinkStyle} to="/api/Workbook/Eleviating/Documentation">Agitated</NavLink>  {/* Lack Coping Skills, A cry for help, I need someting but don't know to get it.*/}
-                <NavLink activeStyle={actStyle} className={navLinkFormatting} style={navLinkStyle} to="/api/Workbook/Eleviating/Recovery">Aggressive</NavLink>  {/* */}
-                <NavLink activeStyle={actStyle} className={navLinkFormatting} style={navLinkStyle} to="/api/Workbook/Eleviating/Recovery">Outburst</NavLink>  {/* Signals - Loss of Coping, yelling, withdrawing, demanding, destroying property, */}
-                <NavLink activeStyle={actStyle} className={navLinkFormatting} style={navLinkStyle} to="/api/Workbook/Eleviating/Recovery">Crisis</NavLink>  {/* crisis change in their behavior indicating that the child or young person may be running out of effective, rational, and constructive ways of coping with the situation, This is a cry for help , means having exhausted or never having learned effective, constructive, and rational ways of coping with stress, upset, or pain. */}
-                <NavLink activeStyle={actStyle} className={navLinkFormatting} style={navLinkStyle} to="/api/Workbook/Eleviating/Recovery">Teach Coping Skills</NavLink>  {/* EMDR, DBT, Art Therapy, Music Therapy, Touch Therapy, Bonding Therapy, Emotional Focus Therapy, Person Centered Therapy, Gestalt Therapy, Systemic Therapy, Attachment Therapy, Video Therapy, Biblio therapy, journaling, */}
+                <NavLink activeStyle={actStyle} className={navLinkFormatting} style={navLinkStyle} to="/api/TriggerManagement/Eleviating/Intervention">Baseline</NavLink>  {/* ICMP, */}
+                <NavLink activeStyle={actStyle} className={navLinkFormatting} style={navLinkStyle} to="/api/TriggerManagement/Eleviating/Intervention">Missing Co-regulation</NavLink>  {/* */}
+                <NavLink activeStyle={actStyle} className={navLinkFormatting} style={navLinkStyle} to="/api/TriggerManagement/Eleviating/SafetyConcerns">Trigger</NavLink>  {/* Personal Setting Conditions, Environmental Setting Conditions*/}
+                <NavLink activeStyle={actStyle} className={navLinkFormatting} style={navLinkStyle} to="/api/TriggerManagement/Eleviating/Documentation">Agitated</NavLink>  {/* Lack Coping Skills, A cry for help, I need someting but don't know to get it.*/}
+                <NavLink activeStyle={actStyle} className={navLinkFormatting} style={navLinkStyle} to="/api/TriggerManagement/Eleviating/Recovery">Aggressive</NavLink>  {/* */}
+                <NavLink activeStyle={actStyle} className={navLinkFormatting} style={navLinkStyle} to="/api/TriggerManagement/Eleviating/Recovery">Outburst</NavLink>  {/* Signals - Loss of Coping, yelling, withdrawing, demanding, destroying property, */}
+                <NavLink activeStyle={actStyle} className={navLinkFormatting} style={navLinkStyle} to="/api/TriggerManagement/Eleviating/Recovery">Crisis</NavLink>  {/* crisis change in their behavior indicating that the child or young person may be running out of effective, rational, and constructive ways of coping with the situation, This is a cry for help , means having exhausted or never having learned effective, constructive, and rational ways of coping with stress, upset, or pain. */}
+                <NavLink activeStyle={actStyle} className={navLinkFormatting} style={navLinkStyle} to="/api/TriggerManagement/Eleviating/Recovery">Teach Coping Skills</NavLink>  {/* EMDR, DBT, Art Therapy, Music Therapy, Touch Therapy, Bonding Therapy, Emotional Focus Therapy, Person Centered Therapy, Gestalt Therapy, Systemic Therapy, Attachment Therapy, Video Therapy, Biblio therapy, journaling, */}
               </div>
             </Panel>
 
@@ -58,10 +58,10 @@ class TriggerManagement extends React.Component {
             </Panel>
             <Panel header="Eleviating Trauma" eventKey="5" style={{ borderTop: '1px solid #333333', borderBottom: '1px solid black' }}>
               <div className="btn-group-vertical" style={{ marginBottom: '0px', display: 'block' }}>
-                <NavLink activeStyle={actStyle} className={navLinkFormatting} style={navLinkStyle} to="/api/Workbook/Eleviating/Intervention">5.1 Choosing an Intervention</NavLink>  {/*Gentle reminders, encouragement, and support, Must intervene as early as possible, As emotion increases, cognition decreases */}
-                <NavLink activeStyle={actStyle} className={navLinkFormatting} style={navLinkStyle} to="/api/Workbook/Eleviating/SafetyConcerns">5.2 Safety Concerns</NavLink>  {/* */}
-                <NavLink activeStyle={actStyle} className={navLinkFormatting} style={navLinkStyle} to="/api/Workbook/Eleviating/Documentation">5.3 Documentation</NavLink>  {/* */}
-                <NavLink activeStyle={actStyle} className={navLinkFormatting} style={navLinkStyle} to="/api/Workbook/Eleviating/Recovery">5.4 Recovery</NavLink>  {/* */}
+                <NavLink activeStyle={actStyle} className={navLinkFormatting} style={navLinkStyle} to="/api/TriggerManagement/Eleviating/Intervention">5.1 Choosing an Intervention</NavLink>  {/*Gentle reminders, encouragement, and support, Must intervene as early as possible, As emotion increases, cognition decreases */}
+                <NavLink activeStyle={actStyle} className={navLinkFormatting} style={navLinkStyle} to="/api/TriggerManagement/Eleviating/SafetyConcerns">5.2 Safety Concerns</NavLink>  {/* */}
+                <NavLink activeStyle={actStyle} className={navLinkFormatting} style={navLinkStyle} to="/api/TriggerManagement/Eleviating/Documentation">5.3 Documentation</NavLink>  {/* */}
+                <NavLink activeStyle={actStyle} className={navLinkFormatting} style={navLinkStyle} to="/api/TriggerManagement/Eleviating/Recovery">5.4 Recovery</NavLink>  {/* */}
               </div>
             </Panel>
             <Panel header="Maintaining Sanctuary" eventKey="4" style={{ borderTop: '1px solid #333333', borderBottom: '1px solid black' }}>
@@ -77,25 +77,25 @@ class TriggerManagement extends React.Component {
             </Panel>
             <Panel header="Worst Practices" eventKey="6" style={{ borderTop: '1px solid #333333', borderBottom: '1px solid black' }}>
               <div className="btn-group-vertical" style={{ marginBottom: '0px', display: 'block' }}>
-                <NavLink activeStyle={actStyle} className={navLinkFormatting} style={navLinkStyle} to="/api/Workbook/Eleviating/Intervention">Expediency</NavLink>  {/* */}
-                <NavLink activeStyle={actStyle} className={navLinkFormatting} style={navLinkStyle} to="/api/Workbook/Eleviating/SafetyConcerns">Operant Conditioning</NavLink>  {/* */}
-                <NavLink activeStyle={actStyle} className={navLinkFormatting} style={navLinkStyle} to="/api/Workbook/Eleviating/Documentation">Forced Compliance</NavLink>  {/* */}
-                <NavLink activeStyle={actStyle} className={navLinkFormatting} style={navLinkStyle} to="/api/Workbook/Eleviating/Recovery">Negative Expectations</NavLink>  {/* */}
-                <NavLink activeStyle={actStyle} className={navLinkFormatting} style={navLinkStyle} to="/api/Workbook/Eleviating/Recovery">Boundries as Control</NavLink>  {/* */}
-                <NavLink activeStyle={actStyle} className={navLinkFormatting} style={navLinkStyle} to="/api/Workbook/Eleviating/Recovery">Sarcasm</NavLink>  {/* */}
-                <NavLink activeStyle={actStyle} className={navLinkFormatting} style={navLinkStyle} to="/api/Workbook/Eleviating/Recovery">Authoritarian Control</NavLink>  {/* Staff/guardian Splitting in favor of forced compliance, Expediency, Forced Compliance, Any best practice as control, authoritarian control, us-against-them, staff splitting, Sarcasm, Boundries as Control, Negative Expectations, Operant Conditioning*/}
+                <NavLink activeStyle={actStyle} className={navLinkFormatting} style={navLinkStyle} to="/api/TriggerManagement/Eleviating/Intervention">Expediency</NavLink>  {/* */}
+                <NavLink activeStyle={actStyle} className={navLinkFormatting} style={navLinkStyle} to="/api/TriggerManagement/Eleviating/SafetyConcerns">Operant Conditioning</NavLink>  {/* */}
+                <NavLink activeStyle={actStyle} className={navLinkFormatting} style={navLinkStyle} to="/api/TriggerManagement/Eleviating/Documentation">Forced Compliance</NavLink>  {/* */}
+                <NavLink activeStyle={actStyle} className={navLinkFormatting} style={navLinkStyle} to="/api/TriggerManagement/Eleviating/Recovery">Negative Expectations</NavLink>  {/* */}
+                <NavLink activeStyle={actStyle} className={navLinkFormatting} style={navLinkStyle} to="/api/TriggerManagement/Eleviating/Recovery">Boundries as Control</NavLink>  {/* */}
+                <NavLink activeStyle={actStyle} className={navLinkFormatting} style={navLinkStyle} to="/api/TriggerManagement/Eleviating/Recovery">Sarcasm</NavLink>  {/* */}
+                <NavLink activeStyle={actStyle} className={navLinkFormatting} style={navLinkStyle} to="/api/TriggerManagement/Eleviating/Recovery">Authoritarian Control</NavLink>  {/* Staff/guardian Splitting in favor of forced compliance, Expediency, Forced Compliance, Any best practice as control, authoritarian control, us-against-them, staff splitting, Sarcasm, Boundries as Control, Negative Expectations, Operant Conditioning*/}
               </div>
             </Panel>
             <Panel header="Alleviate Pain" eventKey="8" style={{ borderTop: '1px solid #333333', borderBottom: '1px solid black' }}>
               <div className="btn-group-vertical" style={{ marginBottom: '0px', display: 'block' }}>
-                <NavLink activeStyle={actStyle} className={navLinkFormatting} style={navLinkStyle} to="/api/Workbook/Eleviating/Intervention">Baseline</NavLink>  {/* */}
-                <NavLink activeStyle={actStyle} className={navLinkFormatting} style={navLinkStyle} to="/api/Workbook/Eleviating/Intervention">Missing Co-regulation</NavLink>  {/* */}
-                <NavLink activeStyle={actStyle} className={navLinkFormatting} style={navLinkStyle} to="/api/Workbook/Eleviating/SafetyConcerns">Trigger</NavLink>  {/* Boredom, Personal Setting Conditions, Environmental Setting Conditions*/}
-                <NavLink activeStyle={actStyle} className={navLinkFormatting} style={navLinkStyle} to="/api/Workbook/Eleviating/Documentation">Agitated</NavLink>  {/* Lack Coping Skills, A cry for help, I need someting but don't know to get it.*/}
-                <NavLink activeStyle={actStyle} className={navLinkFormatting} style={navLinkStyle} to="/api/Workbook/Eleviating/Recovery">Aggressive</NavLink>  {/* */}
-                <NavLink activeStyle={actStyle} className={navLinkFormatting} style={navLinkStyle} to="/api/Workbook/Eleviating/Recovery">Outburst</NavLink>  {/* */}
-                <NavLink activeStyle={actStyle} className={navLinkFormatting} style={navLinkStyle} to="/api/Workbook/Eleviating/Recovery">Crisis</NavLink>  {/* */}
-                <NavLink activeStyle={actStyle} className={navLinkFormatting} style={navLinkStyle} to="/api/Workbook/Eleviating/Recovery">Teach Coping Skills</NavLink>  {/* Mindfulness, Grounding Self, EMDR, DBT, Art Therapy, Music Therapy, Touch Therapy, Bonding Therapy, Emotional Focus Therapy, Person Centered Therapy, Gestalt Therapy, Systemic Therapy, Attachment Therapy, Video Therapy, Biblio therapy, journaling, Acceptance */}
+                <NavLink activeStyle={actStyle} className={navLinkFormatting} style={navLinkStyle} to="/api/TriggerManagement/Eleviating/Intervention">Baseline</NavLink>  {/* */}
+                <NavLink activeStyle={actStyle} className={navLinkFormatting} style={navLinkStyle} to="/api/TriggerManagement/Eleviating/Intervention">Missing Co-regulation</NavLink>  {/* */}
+                <NavLink activeStyle={actStyle} className={navLinkFormatting} style={navLinkStyle} to="/api/TriggerManagement/Eleviating/SafetyConcerns">Trigger</NavLink>  {/* Boredom, Personal Setting Conditions, Environmental Setting Conditions*/}
+                <NavLink activeStyle={actStyle} className={navLinkFormatting} style={navLinkStyle} to="/api/TriggerManagement/Eleviating/Documentation">Agitated</NavLink>  {/* Lack Coping Skills, A cry for help, I need someting but don't know to get it.*/}
+                <NavLink activeStyle={actStyle} className={navLinkFormatting} style={navLinkStyle} to="/api/TriggerManagement/Eleviating/Recovery">Aggressive</NavLink>  {/* */}
+                <NavLink activeStyle={actStyle} className={navLinkFormatting} style={navLinkStyle} to="/api/TriggerManagement/Eleviating/Recovery">Outburst</NavLink>  {/* */}
+                <NavLink activeStyle={actStyle} className={navLinkFormatting} style={navLinkStyle} to="/api/TriggerManagement/Eleviating/Recovery">Crisis</NavLink>  {/* */}
+                <NavLink activeStyle={actStyle} className={navLinkFormatting} style={navLinkStyle} to="/api/TriggerManagement/Eleviating/Recovery">Teach Coping Skills</NavLink>  {/* Mindfulness, Grounding Self, EMDR, DBT, Art Therapy, Music Therapy, Touch Therapy, Bonding Therapy, Emotional Focus Therapy, Person Centered Therapy, Gestalt Therapy, Systemic Therapy, Attachment Therapy, Video Therapy, Biblio therapy, journaling, Acceptance */}
               </div>
             </Panel>
           </Accordion>

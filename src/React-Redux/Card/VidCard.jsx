@@ -1,36 +1,36 @@
 import React, {  Component } from 'react';
 import PropTypes from 'prop-types';
-// import { asyncSetCard } from './Redux/actions/cardActions';
+import { asyncSetCard } from './Redux/actions/cardActions';
 import { connect } from "react-redux";
-import CardPC from '../../React-Redux/Card/CardPC';
+import CardPC from './CardPC';
+
+
 class Card extends Component {
+
     componentWillMount() {
+      alert("vidcard")
         let myURI = ''; {
-            let { api, page, section, subsection, card } = this.props.match.params;
-            console.log(card);
-            if (card === undefined)
-             card=1;
-            myURI = `/${api}/${page}/${section}/${subsection}/${card}`;
+            let { api, page, section, subsection } = this.props.match.params;
+            myURI = `/${api}/${page}/${section}/${subsection}/1`;
         }
-        // this.props.dispatch(asyncSetCard(myURI));
+        this.props.dispatch(asyncSetCard(myURI));
     }
     componentWillReceiveProps(nextProps) {
         let myURI = ''; {
             let { api, page, section, subsection, card } = this.props.match.params;
-            console.log(card);
+
             if (card === undefined)
             card=1;
             myURI = `/${api}/${page}/${section}/${subsection}/${card}`;
         }
         let myNewURI = ''; {
             let { api, page, section, subsection, card } = nextProps.match.params;
-            console.log(card);
             if (card === undefined)
             card=1;
             myNewURI = `/${api}/${page}/${section}/${subsection}/${card}`
         }
         if (myURI !== myNewURI) {
-            // this.props.dispatch(asyncSetCard(myNewURI));
+            this.props.dispatch(asyncSetCard(myNewURI));
         }
     }
     render() {
