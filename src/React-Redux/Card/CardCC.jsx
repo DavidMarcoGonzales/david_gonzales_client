@@ -5,32 +5,25 @@ import { connect } from "react-redux";
 import CardPC from './CardPC';
 class Card extends Component {
   componentWillMount() {
-    // let myURI = '';
     let { api, page, section, subsection } = this.props.match.params;
-    // console.log(card);
-    // if (card === undefined)
-    //   card = 1;
     let myURI = `/${api}/${page}/${section}/${subsection}/1`;
-
-    this.props.dispatch(asyncSetCard(myURI));
+    this.props.dispatch(asyncSetCard(`https://behavior-support.herokuapp.com/cardsByCurrentURI${myURI}`));
   }
   componentWillReceiveProps(nextProps) {
     let myURI = ''; {
       let { api, page, section, subsection, card } = this.props.match.params;
-      console.log(card);
       if (card === undefined)
         card = 1;
       myURI = `/${api}/${page}/${section}/${subsection}/${card}`;
     }
     let myNewURI = ''; {
       let { api, page, section, subsection, card } = nextProps.match.params;
-      console.log(card);
       if (card === undefined)
         card = 1;
       myNewURI = `/${api}/${page}/${section}/${subsection}/${card}`
     }
     if (myURI !== myNewURI) {
-      this.props.dispatch(asyncSetCard(myNewURI));
+      this.props.dispatch(asyncSetCard(`https://behavior-support.herokuapp.com/cardsByCurrentURI${myNewURI}`));
     }
   }
   render() {

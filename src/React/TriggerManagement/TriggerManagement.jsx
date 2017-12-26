@@ -18,7 +18,7 @@ class TriggerManagement extends React.Component {
             <Panel header="Introduction" eventKey="1" style={{ borderTop: '1px solid #333333', borderBottom: '1px solid black' }} >
               <div className="btn-group-vertical" style={{ marginBottom: '0px', display: 'block' }}>
                 <NavLink activeStyle={actStyle} className={navLinkFormatting} style={navLinkStyle} to="/api/TriggerManagement/Introduction/Need/58dea10fc9dc7ca5e54b9bdb">Why</NavLink> {/* */}
-                <NavLink activeStyle={actStyle} className={navLinkFormatting} style={navLinkStyle} to="/api/TriggerManagement/Introduction/Model">Key Concepts</NavLink> {/* Will not change if not listened to. model behavior, Kindness, Empathy, Equanimity,  */}
+                <NavLink activeStyle={actStyle} className={navLinkFormatting} style={navLinkStyle} to="/api/TriggerManagement/Introduction/Model/58e127a21bb1a9fbc3cb8af7">Key Concepts</NavLink> {/* Will not change if not listened to. model behavior, Kindness, Empathy, Equanimity,  */}
                 <NavLink activeStyle={actStyle} className={navLinkFormatting} style={navLinkStyle} to="/api/TriggerManagement/Introduction/Milieu">Likability</NavLink>  {/* Well liked, they will model the person they like, try to please*/}
                 <NavLink activeStyle={actStyle} className={navLinkFormatting} style={navLinkStyle} to="/api/TriggerManagement/Introduction/Milieu">Modeling Behavior</NavLink>  {/*We model everyday, all day,  Don't tell, show by modeling, */}
                 <NavLink activeStyle={actStyle} className={navLinkFormatting} style={navLinkStyle} to="/api/TriggerManagement/Introduction/Milieu">Personal Development</NavLink>  {/*Model Everyday */}

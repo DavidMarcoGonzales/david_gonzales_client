@@ -4,10 +4,6 @@ import {
 } from "./actionTypes";
 import axios from 'axios';
 
-import {
-  development
-} from "../../../../config";
-
 export function setCard(card) {
   return ({
     type: SET_CURRENT_CARD,
@@ -23,9 +19,6 @@ export function setCardSuccess(card) {
 
 export function asyncSetCard(uri) {
   return (dispatch) => {
-    if (development) {
-      uri = `https://david-gonzales-1.herokuapp.com${uri}`
-    }
     axios.get(uri) // when testing local server 3000 and when deploying no cors
       .then(response => {
         dispatch(setCardSuccess(response.data[0]));
@@ -36,16 +29,15 @@ export function asyncSetCard(uri) {
   };
 }
 
-export function asyncSetCard2(uri) {
-  return (dispatch) => {
-    uri = `https://behavior-support.herokuapp.com/cards/${uri}`
-    axios.get(uri) // when testing local server 3000 and when deploying no cors
-      .then(response => {
-        dispatch(setCardSuccess(response.data[0]));
-      })
-      .catch(error => {
-        throw (error);
-      });
-  };
-}
+// export function asyncSetCard2(uri) {
+//   return (dispatch) => {
+//     axios.get(uri) // when testing local server 3000 and when deploying no cors
+//       .then(response => {
+//         dispatch(setCardSuccess(response.data[0]));
+//       })
+//       .catch(error => {
+//         throw (error);
+//       });
+//   };
+// }
 

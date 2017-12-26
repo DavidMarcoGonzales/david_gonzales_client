@@ -1,32 +1,28 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { asyncSetCard2 } from './Redux/actions/cardActions';
+import { asyncSetCard } from './Redux/actions/cardActions';
 import { connect } from "react-redux";
 import CardPC from './CardPC';
 
-
-class Card extends Component {
+class VidCard extends Component {
 
   componentWillMount() {
     let { card } = this.props.match.params;
-    this.props.dispatch(asyncSetCard2(card));
+    this.props.dispatch(asyncSetCard(`https://behavior-support.herokuapp.com/cardsById/${card}`));
   }
   componentWillReceiveProps(nextProps) {
-    let myURI = ''; {
-      let { api, page, section, subsection, card } = this.props.match.params;
-
-      if (card === undefined)
-        card = 1;
-      myURI = `/${api}/${page}/${section}/${subsection}/${card}`;
+    let myOldCard = '';
+    {
+      let { card } = this.props.match.params;
+      myOldCard = card;
     }
-    let myNewURI = ''; {
-      let { api, page, section, subsection, card } = nextProps.match.params;
-      if (card === undefined)
-        card = 1;
-      myNewURI = `/${api}/${page}/${section}/${subsection}/${card}`
+    let myNewCard = '';
+    {
+      let { card } = nextProps.match.params;
+      myNewCard = card;
     }
-    if (myURI !== myNewURI) {
-      this.props.dispatch(asyncSetCard2(myNewURI));
+    if (myOldCard !== myNewCard) {
+      this.props.dispatch(asyncSetCard(`https://behavior-support.herokuapp.com/cardsById/${myNewCard}`));
     }
   }
   render() {
@@ -40,7 +36,7 @@ class Card extends Component {
     );
   }
 }
-Card.propTypes = {
+VidCard.propTypes = {
   card: PropTypes.object.isRequired
 }
 function mapStateToProps(state) {
@@ -48,4 +44,4 @@ function mapStateToProps(state) {
     card: state.card
   }
 }
-export default connect(mapStateToProps)(Card);
+export default connect(mapStateToProps)(VidCard);
