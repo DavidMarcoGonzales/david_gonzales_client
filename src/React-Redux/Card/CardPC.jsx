@@ -39,9 +39,9 @@ class CardPC extends Component {
         return (
             <div style={{ minHeight: '500px' }}>
                 <nav className="navbar navbar-default">
-                    <NavLink className="col-md-1 btn btn-primary pull-left" to={this.props.card.prevURN || ""}>Prev</NavLink>
+                    <NavLink className="col-md-1 btn btn-primary pull-left" to={this.props.myPath + '/' + this.props.card.prevURN  || ""}>Prev</NavLink>
                     <p className="navbar-text  pull-left">{this.props.card.title}</p>
-                    <NavLink className="col-md-1 btn btn-primary pull-right" to={this.props.card.nextURN || ""}>Next</NavLink>
+                    <NavLink className="col-md-1 btn btn-primary pull-right" to={this.props.myPath + '/' + this.props.card.nextURN || ""}>Next</NavLink>
                 </nav>
                 {uTubeVid}
                 {myArray1}
@@ -56,7 +56,8 @@ class CardPC extends Component {
     }
 }
 CardPC.propTypes = {
-    card: PropTypes.object.isRequired
+    card: PropTypes.object.isRequired,
+    myPath: PropTypes.string.isRequired
 };
 
 export default CardPC;
