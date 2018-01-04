@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { asyncSetCard } from './Redux/actions/cardActions';
+import { setCard, asyncSetCard } from '../../Redux/actions/cardActions';
+//'./Redux/actions/cardActions';
 import { connect } from "react-redux";
 import CardPC from './CardPC';
 const getFirstCard = (path) => {
@@ -8,7 +9,6 @@ const getFirstCard = (path) => {
     // Prevention
     case '/api/Workbook/Prevention/Need':
       return '58de9be71bb1a9fbc3cb8af0';
-    // return '58de9c471bb1a9fbc3cb8af1';
     case '/api/Workbook/Prevention/Model':
       return '58dc0b0e533e693d7d43f9bb';
     case '/api/Workbook/Prevention/Milieu':
@@ -68,7 +68,8 @@ class Card extends Component {
   componentWillMount() {
     let { api, page, section, subsection } = this.props.match.params;
     let myFirstCard = getFirstCard(`/${api}/${page}/${section}/${subsection}`);
-    this.props.dispatch(asyncSetCard(`https://behavior-support.herokuapp.com/cardsById/${myFirstCard}`));
+    this.props.dispatch(asyncSetCard(`https://behavior-support.herokuapp.com/api/cards/${myFirstCard}`));
+    // this.props.dispatch(asyncSetCard(`/api/cards/${myFirstCard}`));
   }
   componentWillReceiveProps(nextProps) {
     let myCard = ''; {
@@ -83,11 +84,23 @@ class Card extends Component {
         card = getFirstCard(`/${api}/${page}/${section}/${subsection}`)
       myNewCard = card
     }
-    console.log(myCard + " " + myNewCard);
     if (myCard !== myNewCard) {
-      this.props.dispatch(asyncSetCard(`https://behavior-support.herokuapp.com/cardsById/${myNewCard}`));
+     this.props.dispatch(asyncSetCard(`https://behavior-support.herokuapp.com/api/cards/${myNewCard}`));
+      // this.props.dispatch(asyncSetCard(`/api/cards/${myNewCard}`));
     }
   }
+  componentWillUnmount(){
+    this.props.dispatch(setCard({
+      vid:{},
+      rdfts1:[],
+      rdfts2:[],
+      rdfts3:[],
+      rdfts4:[],
+      rdfts5:[]
+    }));
+  }
+
+
   render() {
     let { api, page, section, subsection } = this.props.match.params
     return (

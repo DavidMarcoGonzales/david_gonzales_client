@@ -29,15 +29,3 @@ export function asyncSetCard(uri) {
   };
 }
 
-// export function asyncSetCard2(uri) {
-//   return (dispatch) => {
-//     axios.get(uri) // when testing local server 3000 and when deploying no cors
-//       .then(response => {
-//         dispatch(setCardSuccess(response.data[0]));
-//       })
-//       .catch(error => {
-//         throw (error);
-//       });
-//   };
-// }
-

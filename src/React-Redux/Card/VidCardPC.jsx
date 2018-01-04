@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { NavLink } from "react-router-dom";
+// import { NavLink } from "react-router-dom";
 import YouTube from 'react-youtube';
 
 class CardPC extends Component {
@@ -15,7 +15,7 @@ class CardPC extends Component {
             }
         };
         let uTubeVid = null;
-        if (this.props.card.vid.src !== "" ) {
+        if (this.props.card.vid.src !== "") {
             uTubeVid = <YouTube
                 videoId={this.props.card.vid.src || ""}
                 opts={opts}
@@ -39,9 +39,9 @@ class CardPC extends Component {
         return (
             <div style={{ minHeight: '500px' }}>
                 <nav className="navbar navbar-default">
-                    <NavLink className="col-md-1 btn btn-primary pull-left" to={this.props.myPath + '/' + this.props.card.prevURN  || ""}>Prev</NavLink>
+                    {/* <NavLink className="col-md-1 btn btn-primary pull-left" to={this.props.myPath + '/' + this.props.card.prevURN  || ""}>Prev</NavLink> */}
                     <p className="navbar-text  pull-left">{this.props.card.title}</p>
-                    <NavLink className="col-md-1 btn btn-primary pull-right" to={this.props.myPath + '/' + this.props.card.nextURN || ""}>Next</NavLink>
+                    {/* <NavLink className="col-md-1 btn btn-primary pull-right" to={this.props.myPath + '/' + this.props.card.nextURN || ""}>Next</NavLink> */}
                 </nav>
                 {uTubeVid}
                 {myArray1}
@@ -56,8 +56,7 @@ class CardPC extends Component {
     }
 }
 CardPC.propTypes = {
-    card: PropTypes.object.isRequired,
-    myPath: PropTypes.string.isRequired
+    card: PropTypes.object.isRequired
 };
 
 export default CardPC;
