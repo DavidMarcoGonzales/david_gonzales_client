@@ -14,7 +14,7 @@ class App extends Component {
         <div className="navbar navbar-default" style={{ marginBottom: '0px' }} >
           <ul className="nav navbar-nav">
           <li className="nav"><NavLink to="/api/Workbook">TCI Student Workbook</NavLink></li>
-          <li className="nav"><NavLink to="/api/TriggerManagement">Trigger Management</NavLink></li>
+          <li className="nav"><NavLink to="/api/TriggerManagement">Trauma Informed Care</NavLink></li>
           <li className="nav"><NavLink to="/api/courses">Courses</NavLink></li>
           </ul>
         </div>
